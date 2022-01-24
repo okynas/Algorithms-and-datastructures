@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Moduler.iml" filepath="$PROJECT_DIR$/Moduler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Modul2_Stack/Oppgave1/Oppgave1.iml" filepath="$PROJECT_DIR$/Modul2_Stack/Oppgave1/Oppgave1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Modul2_Stack/Oppgave2/Oppgave2.iml" filepath="$PROJECT_DIR$/Modul2_Stack/Oppgave2/Oppgave2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Modul2_Stack/Oppgave3/Oppgave3.iml" filepath="$PROJECT_DIR$/Modul2_Stack/Oppgave3/Oppgave3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Modul2_Stack/Oppgave4/Oppgave4.iml" filepath="$PROJECT_DIR$/Modul2_Stack/Oppgave4/Oppgave4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Modul2_Stack/Oppgave5/Oppgave5.iml" filepath="$PROJECT_DIR$/Modul2_Stack/Oppgave5/Oppgave5.iml" />
+    </modules>
+  </component>
+</project>
