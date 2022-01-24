@@ -4,6 +4,7 @@ import java.util.Random;
 public class Fly {
 
     private int id;
+    private int behandlingsTid;
     private String name;
     private String type;
     private String produsent;
@@ -76,8 +77,9 @@ public class Fly {
         return rand.nextInt() * (max - min) + min;
     }
 
-    public Fly(int id) {
+    public Fly(int id, int behandlingsTid) {
         this.id = id;
+        this.behandlingsTid = behandlingsTid;
         name = getRandomName();
         type = getRandomType();
         høyde = randFloat(2,10);
@@ -87,6 +89,10 @@ public class Fly {
         mannskap = randInt(1, 20);
         passasjerer = randInt(1,2000);
         produsent = getRandomProdusent();
+    }
+
+    public int getBehandlingsTid() {
+        return behandlingsTid;
     }
 
     public int getId() {

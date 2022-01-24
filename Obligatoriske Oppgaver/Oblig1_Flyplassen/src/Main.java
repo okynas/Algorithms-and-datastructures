@@ -7,8 +7,10 @@ public class Main {
     public static int ANTALL_FLY_BEHANDLET = 0;
     public static int ANTALL_FLY_LANDA = 0;
     public static int ANTALL_FLY_TATT_AV = 0;
-    public static int ANTALL_FLY_KLARE_FOR_LANDING = 0;
-    public static int ANTALL_FLY_KLARE_FOR_TA_AV = 0;
+    public static int TOTAL_VENTETID_LANDING = 0;
+    public static int TOTAL_VENTETID_AVGANG = 0;
+    public static double GJENNOMSNITT_VENTETID_LANDING = 0.0;
+    public static double GJENNOMSNITT_VENTETID_AVGANG = 0.0;
 
     public static void main(String[] args) {
 
@@ -67,7 +69,27 @@ public class Main {
         // behandler køen og flyplassen
         behandleKø(landinger, avgang, antallTidsEnheter, forventetAntallAnkomst, forventetAntallAvgang);
 
+        utskrift(antallTidsEnheter, landinger, avgang);
 
+    }
+
+    public static  void utskrift(float antallTidsEnheter, Queue<Fly> landinger, Queue<Fly> avgang) {
+
+        GJENNOMSNITT_VENTETID_LANDING = ((double)TOTAL_VENTETID_LANDING / (double)ANTALL_FLY_LANDA);
+        GJENNOMSNITT_VENTETID_AVGANG = ((double)TOTAL_VENTETID_AVGANG / (double)ANTALL_FLY_TATT_AV);
+
+        System.out.println();
+        System.out.println("Simulering ferdig etter         :" + antallTidsEnheter + " tidsenheter.");
+        System.out.println("Antall fly som ble behandler    :" + ANTALL_FLY_BEHANDLET);
+        System.out.println("Antall fly som ble avvist       :" + ANTALL_FLY_AVVIST);
+        System.out.println("Antall fly som tok av           :" + ANTALL_FLY_TATT_AV);
+        System.out.println("Antall fly som landet           :" + ANTALL_FLY_LANDA);
+        System.out.println("Antall fly klare for å lande    :" + landinger.size());
+        System.out.println("Antall fly klare for å ta av    :" + avgang.size());
+        System.out.println("Total ventetid landing:         :" + TOTAL_VENTETID_LANDING);
+        System.out.println("Total ventetid avgang:          :" + TOTAL_VENTETID_AVGANG);
+        System.out.println("Gj.snitt ventetid landing:      :" + GJENNOMSNITT_VENTETID_LANDING);
+        System.out.println("Gj.snitt ventetid avgang :      :" + GJENNOMSNITT_VENTETID_AVGANG);
     }
 
     public static void behandleKø(Queue<Fly> landing, Queue<Fly> avgang, int tidsenhet, double forventetAnkomst, double forventetAvgang) {
@@ -83,21 +105,23 @@ public class Main {
 
             // For hvert nytt fly som kommer for å lande
             for (int j = 0; j < antallNyeFlyForLanding; j++) {
-                //int ventetid = 0;
 
-                Fly nyttFlySomKanLande = new Fly(FLY_ID++);
-
-                //System.out.println("    Fly " + nyttFlySomKanLande.getId() + " er klar for landing.");
+                Fly nyttFlySomKanLande = new Fly(FLY_ID, i);
+                ANTALL_FLY_BEHANDLET++;
 
                 // Hvis landingskøen er full, Avvis det nye flyet (henvis til annen flyplass)
                 if (landing.size() > MAKS_ANTLL) {
+                    System.out.println("    Fly " + nyttFlySomKanLande.getId() + " avvist, for mange i kø");
                     ANTALL_FLY_AVVIST++;
                 }
                 // ELLERS, Sett det nye flyet sist i landingskøen
                 else {
                     landing.add(nyttFlySomKanLande);
-                    //System.out.println("    Fly " + nyttFlySomKanLande.getId() + " landet, ventetid " + ventetid + " enheter.");
+                    System.out.println("    Fly " + nyttFlySomKanLande.getId() + " klar for landing");
+                    ANTALL_FLY_LANDA++;
                 }
+
+                FLY_ID++;
             }
 
 
@@ -106,34 +130,43 @@ public class Main {
 
             // For hvert nytt fly som kommer for å ta av
             for (int j = 0; j < antallNyeFlyForTaAv; j++) {
-                //int ventetid = 0;
 
-                Fly nyttFlySomKanTaAv = new Fly(FLY_ID++);
+                Fly nyttFlySomKanTaAv = new Fly(FLY_ID, i);
 
-                //System.out.println("    Fly " + nyttFlySomKanTaAv.getId() + " er klar for avgang.");
+                ANTALL_FLY_BEHANDLET++;
 
                 // Hvis avgangskøen er full ,Avvis det nye flyet (avgang må prøves senere)
-                if (avgang.size() < MAKS_ANTLL) {
+                if (avgang.size() > MAKS_ANTLL) {
+                    System.out.println("    Fly " + nyttFlySomKanTaAv.getId() + " avvist, for mange i kø");
                     ANTALL_FLY_AVVIST++;
                 }
                 // ellers, Sett det nye flyet sist i avgangskøen
                 else {
                     avgang.add(nyttFlySomKanTaAv);
-                    // System.out.println("    Fly " + nyttFlySomKanTaAv.getId() + " tatt av, ventetid " + ventetid + " enheter.");
+                    System.out.println("    Fly " + nyttFlySomKanTaAv.getId() + " klar for avgang");
+                    ANTALL_FLY_TATT_AV++;
                 }
+
+                FLY_ID++;
 
             }
 
             //  Hvis landingskøen ikke er tom, Ta ut første fly i landingskøen og la det få lande
             if (!landing.isEmpty()) {
                 Fly flySomKanLande = landing.remove();
-                System.out.println("    Fly " + flySomKanLande.getId() + " landet.");
+
+                int ventetid = i - flySomKanLande.getBehandlingsTid();
+                System.out.println("    Fly " + flySomKanLande.getId() + " landet, ventetid " + ventetid);
+                TOTAL_VENTETID_LANDING += ventetid;
+                // System.out.println("VENTETID: " + TOTAL_VENTETID_LANDING);
             }
 
             // ellers hvis avgangskøen ikke er tom, Ta ut første fly i avgangskøen og la det få ta av
             else if (!avgang.isEmpty()) {
                 Fly flySomKanTaAv = avgang.remove();
-                System.out.println("    Fly " + flySomKanTaAv.getId() + " tok av.");
+                int ventetid = i - flySomKanTaAv.getBehandlingsTid();
+                System.out.println("    Fly " + flySomKanTaAv.getId() + " tok av, ventetid: " + ventetid);
+                TOTAL_VENTETID_AVGANG += ventetid;
             }
 
             // ellers, Flyplassen er tom for fly
@@ -142,11 +175,6 @@ public class Main {
             }
 
         }
-
-        System.out.println();
-        System.out.println("Simulering ferdig etter         " + tidsenhet + " tidsenheter.");
-        System.out.println("Antall fly som ble behandler    " + FLY_ID);
-
     }
 
     private static int getPoissonRandom(double mean) {
@@ -154,6 +182,7 @@ public class Main {
         double L = Math.exp(-mean);
         int k = 0;
         double p = 1.0;
+
         while (p > L){
             p = p * r.nextDouble();
             k++;
