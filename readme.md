@@ -1,8 +1,8 @@
 # Algoritmer-og-Datastrukturer
 
-![Switching Sort](https://gfycat.com/calculatingflawedilsamochadegu)
+![Switching Sort](https://gfycat.com/calculatingflawedilsamochadegu.gif)
 
-![Sorting Algorithms](https://gfycat.com/likablethoughtfulkingfisher)
+![Sorting Algorithms](https://gfycat.com/likablethoughtfulkingfisher.gif)
 
 ## Innhold:
 
