@@ -16,7 +16,7 @@ public class Main {
     public static boolean isPalindrom(ArrayStack<Character> s, ArrayQueue<Character> q, String linje) {
         // Remove whitespace and turn into lowcase:
         linje = linje.toLowerCase().replaceAll("\\s+","");
-        
+
         // adding strings / characters to the stack and the queue.
         for (int i = 0; i < linje.length(); i++) {
             s.push(linje.charAt(i));

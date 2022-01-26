@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Modul3_Queue_RadixSort.iml" filepath="$PROJECT_DIR$/.idea/Modul3_Queue_RadixSort.iml" />
       <module fileurl="file://$PROJECT_DIR$/Oppgave1/Oppgave1.iml" filepath="$PROJECT_DIR$/Oppgave1/Oppgave1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Oppgave2/Oppgave2.iml" filepath="$PROJECT_DIR$/Oppgave2/Oppgave2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Oppgave3/Oppgave3.iml" filepath="$PROJECT_DIR$/Oppgave3/Oppgave3.iml" />
     </modules>
   </component>
 </project>
