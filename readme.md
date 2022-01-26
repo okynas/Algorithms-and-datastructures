@@ -1,5 +1,9 @@
 # Algoritmer-og-Datastrukturer
 
+![Switching Sort](https://gfycat.com/calculatingflawedilsamochadegu)
+
+![Sorting Algorithms](https://gfycat.com/likablethoughtfulkingfisher)
+
 ## Innhold:
 
 - Algoritmeanalyse
