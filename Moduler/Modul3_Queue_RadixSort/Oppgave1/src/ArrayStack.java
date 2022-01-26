@@ -1,7 +1,6 @@
 import java.util.Arrays;
 
-public class ArrayStack<T> implements StackADT<T>
-{
+public class ArrayStack<T> implements StackADT<T> {
     private final static int DEFAULT_CAPACITY = 100;
 
     private int top;
