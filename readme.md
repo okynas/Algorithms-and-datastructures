@@ -7,6 +7,29 @@
 - Sentrale datastrukturer som tabeller, lister, køer, stakker, hashtabeller, søketrær, heap, B-trær og grafer
 - Algoritmer for sortering, søking, lagring og rekursjon.
 
+
+## Algoritmer:
+- Stack
+- Queue
+- Radix Sort
+- Lister
+- Rekursiv Programmering
+- Backtracking
+- Søking
+- Sortering
+- Sekvensiell sorteringsalgoritme
+- Shell sort
+- Logaritmiske sorteringsalgoritmer
+- Binær trær
+- Binær søketrær
+- Selvbalanserende søketrær
+- Svadagenerator
+- B-trær
+- Heap og prioriteringskø
+- Heapsort
+- Hashing
+- Grafer (Traversering, nåbarher, kortestevei)
+
 ## Læringsutbytte:
 
 Etter gjennomgang skal algoritmer og datastrukturer gi kunnskap i:
