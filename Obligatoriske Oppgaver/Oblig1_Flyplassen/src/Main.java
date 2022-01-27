@@ -72,7 +72,7 @@ public class Main {
         Queue<Fly> landinger = new LinkedList<>();
 
         // behandler køen og flyplassen
-        behandleKø(landinger, avgang, antallTidsEnheter, forventetAntallAnkomst, forventetAntallAvgang);
+        behandleQueue(landinger, avgang, antallTidsEnheter, forventetAntallAnkomst, forventetAntallAvgang);
 
         utskrift(antallTidsEnheter, landinger, avgang, forventetAntallAnkomst, forventetAntallAvgang);
 
@@ -104,7 +104,7 @@ public class Main {
         System.out.println("Gj.snitt lengde avgang   :      :" + GJSNITT_LENGDE_AV_AVGANG);
     }
 
-    public static void behandleKø(Queue<Fly> landing, Queue<Fly> avgang, int tidsenhet, double forventetAnkomst, double forventetAvgang) {
+    public static void behandleQueue(Queue<Fly> landing, Queue<Fly> avgang, int tidsenhet, double forventetAnkomst, double forventetAvgang) {
         int FLY_ID = 0;
 
         // For hver tidssteg i simuleringen
