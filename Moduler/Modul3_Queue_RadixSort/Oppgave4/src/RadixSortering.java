@@ -1,46 +1,61 @@
 import java.util.*;
 
 public class RadixSortering {
+    private static final int maksLength = 26;
 
-    public static void sort(int a[], int masksSiffer) {
-        /*
-        1 Opprett en array Q med 10 tomme køer
-        2 For k=0,1,2,...,m–1
-            2.1 For i=0,1,2,...,n–1
-                2.1.1 index=(A[i]/10k)%10 2.1.2 Q[ index ].enqueue( A[ i ] )
-            2.2 i = 0
-            2.3 For j=0,1,2,...,9
-                2.3.1 While !Q[ j ].isEmpty( )
-                2.3.1.1 A[ i ] = Q[ j ].dequeue( ) 2.3.1.2 i=i+1
-        */
-
-        int ti_i_m = 1; // lagrer 10^n;
+    public static void sortCharacters(String a[], int maksTegn) {
         int n = a.length;
 
-        Queue<Integer>[] Q = (Queue<Integer>[]) new Queue[10];
+        for (int i = 0; i < n; i++) {
+            a[i] = a[i].toLowerCase();
+        }
 
-        for (int i = 0; i < 10; i++) {
+        Queue<String>[] Q = (Queue<String>[]) new Queue[maksLength];
+
+        for (int i = 0; i < maksLength; i++) {
             Q[i] = new LinkedList<>();
         }
 
         // sorterer på et og et siffer., høyre mot venstre.
-        for (int m = 0; m < masksSiffer; m++) {
+        for (int m = maksTegn; m > 0; m--) {
             for (int i = 0; i < n; i++) {
-                int siffer = (a[i] / ti_i_m) % 10;
-                Q[siffer].add(a[i]);
+                int index;
+                if (a[i].length() < m) {
+                    index = 0;
+                } else {
+                    index = a[i].charAt(m-1) - 'a';
+                }
+                Q[index].add(a[i]);
             }
 
             // tømmer køene, og legger tall fortløpende på a.
-
             int j = 0;
-            for (int i = 0; i < 10; i++) {
+            for (int i = 0; i < maksLength; i++) {
                 while (!Q[i].isEmpty()) {
-                    a[j++] = Q[i].remove();
+                    a[j++] = (String) Q[i].remove();
                 }
             }
-            ti_i_m *= 10;
         }
+    }
 
+    public static void main(String[] args) {
+    // Leser antall tall og antall siffer fra kommandolinja
+        int antallSomSkalSorteres = 24; // Integer.parseInt(args[0]);
+        int strPaaElementet = 9; // Integer.parseInt(args[1]);
 
+        String S[] = {"Arne", "Reidar", "Ottar", "Harry", "Cashmere",
+                "Cat", "Peder", "Bjarne", "Christian", "Robert",
+                "Garth", "Rick", "Levon", "Richard", "Robbie",
+                "Ronnie", "Bob", "Frank", "Zappa", "Aaron",
+                "Bjartmar", "Adolf", "Hermann", "Vidkun"};
+
+        // Sorterer
+        RadixSortering rS = new RadixSortering();
+        sortCharacters(S, strPaaElementet);
+
+        // skriver ut alle i riktig rekkefølge.
+        for (int i = 0; i < antallSomSkalSorteres; i++) {
+            System.out.println(S[i]);
+        }
     }
 }
