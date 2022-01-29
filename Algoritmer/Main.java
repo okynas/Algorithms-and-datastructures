@@ -1,3 +1,4 @@
+import List.UnOrderedListInt;
 import Queue.QueueInt;
 import RadixSort.RadixSortInt;
 import Stack.*;
@@ -34,7 +35,12 @@ public class Main {
         System.out.println(queue.first());
         System.out.println(queue.size());*/
 
-        radix(args); // krever at man kjører "java Main 10 10" f.eks.
+        // radix(args); // krever at man kjører "java Main 10 10" f.eks.
+
+        UnOrderedListInt list = new UnOrderedListInt(10);
+        list.addToRear(4);
+        list.addToRear(7);
+        System.out.println(list.toString());
     }
 
     public static void radix(String[] args) {
