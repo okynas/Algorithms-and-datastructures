@@ -1,4 +1,5 @@
-import List.UnOrderedListInt;
+import List.OrderedList;
+import List.UnorderedList;
 import Queue.QueueInt;
 import RadixSort.RadixSortInt;
 import Stack.*;
@@ -37,7 +38,8 @@ public class Main {
 
         // radix(args); // krever at man kjører "java Main 10 10" f.eks.
 
-        UnOrderedListInt list = new UnOrderedListInt(10);
+        UnorderedList<Integer> list = new UnorderedList(10);
+        list.addToFront(5);
         list.addToRear(4);
         list.addToRear(7);
         list.addToFront(5);
@@ -46,6 +48,19 @@ public class Main {
         System.out.println(list.toString());
         System.out.println(list.removeFirst());
         System.out.println(list.toString());
+        list.addToRear(2);
+        System.out.println(list.toString());
+        list.addAfter(7, 5);
+        System.out.println(list.toString());
+
+        System.out.println("----");
+
+        OrderedList<Integer> ol = new OrderedList<>(10);
+        ol.add(3);
+        ol.add(2);
+        System.out.println(ol);
+
+        System.out.println(ol.contains(2));
     }
 
     public static void radix(String[] args) {
