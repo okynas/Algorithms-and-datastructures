@@ -40,6 +40,11 @@ public class Main {
         UnOrderedListInt list = new UnOrderedListInt(10);
         list.addToRear(4);
         list.addToRear(7);
+        list.addToFront(5);
+        System.out.println(list.toString());
+        list.removeLast();
+        System.out.println(list.toString());
+        System.out.println(list.removeFirst());
         System.out.println(list.toString());
     }
 
