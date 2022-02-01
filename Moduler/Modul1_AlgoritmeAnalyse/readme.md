@@ -1,4 +1,11 @@
 # 1.2: Øvingsoppgaver
+
+### Oppgaver:
+- [x] Oppgave 1
+- [x] Oppgave 2
+- [x] Oppgave 3
+- [x] Oppgave 4
+
 ## Oppgave 1
 
 Bruk O-notasjon til å angi arbeidsmengden for hver av de 7 kodebitene nedenfor:

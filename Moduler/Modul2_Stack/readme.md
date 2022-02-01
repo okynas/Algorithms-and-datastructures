@@ -1,5 +1,11 @@
 
 # 2.2: Øvingsoppgaver
+### Oppgaver:
+- [x] Oppgave 1
+- [x] Oppgave 2
+- [x] Oppgave 3
+- [x] Oppgave 4
+- [x] Oppgave 5
 ## Oppgave 1
 
 La S være en stack der dataene f.eks. kan være enkle heltall. Bruk operasjonene pop, push, peek og isEmpty i lærebokas stack-modul (Lenker til en ekstern side.) til å lage metoder som utfører følgende operasjoner:

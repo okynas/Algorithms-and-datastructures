@@ -1,5 +1,13 @@
 
 # 3.3: Øvingsoppgaver
+
+### Oppgaver:
+- [x] Oppgave 1
+- [x] Oppgave 2
+- [x] Oppgave 3
+- [x] Oppgave 4
+- [x] Oppgave 5
+
 ## Oppgave 1
 Skriv om palindromprogrammet fra uke 3 slik at det bruker en stack og en kø til å finne ut om en tekststreng er et [palindrom](http://no.wikipedia.org/wiki/Palindrom). Programmet skal først legge alle tegnene både på stacken og i køen, og skal deretter sjekke om tegnene utgjør et palindrom.
 

@@ -1,4 +1,10 @@
 ## 4.2: Øvingsoppgaver
+### Oppgaver:
+- [x] Oppgave 1
+- [x] Oppgave 2
+- [x] Oppgave 3
+- [x] Oppgave 4
+- [ ] Oppgave 5
 ### Oppgave 1
 I hver av de seks bitene med Java-kodene nedenfor er L en uordnet liste av typen List, som inneholder elementer av typen Integer. Vi antar at List tilbyr de samme metodene for innsetting, fjerning og søking som lærebokas uordnede lister.
 
