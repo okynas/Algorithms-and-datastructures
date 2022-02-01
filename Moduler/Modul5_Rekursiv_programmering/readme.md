@@ -2,6 +2,16 @@
 
 Alle oppgavene her gir trening i bruk av rekursiv tankegang og programmering. Hvis du synes rekursjon er vanskelig å forstå, anbefales du sterkt å løse noen av disse oppgavene på egenhånd. Den eneste måten å lære rekursiv koding på er å lage enkle programmer selv, se at det fungerer, og dermed mestre det. De som har tid og overskudd kan gjerne gjøre så mange som mulig av lærebokas oppgaver i tillegg.
 
+### Oppgaver:
+- [x] Oppgave 1
+- [x] Oppgave 2
+- [x] Oppgave 3
+- [ ] Oppgave 4
+- [ ] Oppgave 5
+- [ ] Oppgave 6
+- [ ] Oppgave 7
+- [ ] Oppgave 8
+
 ## Oppgave 1
 
 Skriv om palindromprogrammet (Lenker til en ekstern side.) fra uke 3 slik at det bruker en rekursiv funksjon til å sjekke om en tekststreng er et palindrom (Lenker til en ekstern side.).
