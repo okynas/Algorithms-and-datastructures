@@ -9,26 +9,26 @@
 
 
 ## Algoritmer:
-- Stack
-- Queue
-- Radix Sort
-- Lister
-- Rekursiv Programmering
-- Backtracking
-- Søking
-- Sortering
-- Sekvensiell sorteringsalgoritme
-- Shell sort
-- Logaritmiske sorteringsalgoritmer
-- Binær trær
-- Binær søketrær
-- Selvbalanserende søketrær
-- Svadagenerator
-- B-trær
-- Heap og prioriteringskø
-- Heapsort
-- Hashing
-- Grafer (Traversering, nåbarher, kortestevei)
+[x] Stack
+[x] Queue
+[x] Radix Sort
+[x] Lister
+[ ] Rekursiv Programmering
+[ ] Backtracking
+[ ] Søking
+[ ] Sortering
+[ ] Sekvensiell sorteringsalgoritme
+[ ] Shell sort
+[ ] Logaritmiske sorteringsalgoritmer
+[ ] Binær trær
+[ ] Binær søketrær
+[ ] Selvbalanserende søketrær
+[ ] Svadagenerator
+[ ] B-trær
+[ ] Heap og prioriteringskø
+[ ] Heapsort
+[ ] Hashing
+[ ] Grafer (Traversering, nåbarher, kortestevei)
 
 ## Læringsutbytte:
 
