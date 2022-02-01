@@ -5,10 +5,14 @@ public class RekursivKvadrater {
         }
 
         return 2 * n + kvadrat(n-1) - 1;
+    }
 
+    public static int kvadrat_i(int n) {
+        return n*n;
     }
 
     public static void main(String[] args) {
         System.out.println(kvadrat(5));
+        System.out.println(kvadrat_i(5));
     }
 }
