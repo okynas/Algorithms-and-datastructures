@@ -1,4 +1,3 @@
-## 4.2: Øvingsoppgaver
 ### Oppgave 1
 I hver av de seks bitene med Java-kodene nedenfor er L en uordnet liste av typen List, som inneholder elementer av typen Integer. Vi antar at List tilbyr de samme metodene for innsetting, fjerning og søking som lærebokas uordnede lister.
 
@@ -56,10 +55,44 @@ Hva er arbeidsmengden for hver av disse seks kodesekvensene, angitt med O-notasj
 - Som en lenket liste.
 
 ## SVAR:
-#### 1a 
-- removeFirst: 	
+
+- removeFirst:
 - removeLast:
 - addToFront:
 - addToRear:
 - addAfter:
-- contains:	
+- contains:
+
+#### 1a - Uordnet ArrayList
+
+- removeFirst: O(n)
+- removeLast: O(1)
+- addToFront: O(n)
+- addToRear: O(1)
+- addAfter: O(n)
+- contains:	O(n)
+
+Arbeidsmengde:
+1. n*O(n) = O(n^2)
+2. n*O(1) = O(n)
+3. O(n^2)
+4. O(n)
+5. O(n^2)
+6. O(n^2)
+
+#### 1b - Uordnet lenket liste
+
+- removeFirst: O(1)
+- removeLast: O(n)
+- addToFront: O(1)
+- addToRear: O(1)
+- addAfter: O(n)
+- contains: O(n)
+
+Arbeidsmengde:
+1. O(n)
+2. O(n^2)
+3. O(n)
+4. O(n)
+5. O(n^2)
+6. O(n^2)
