@@ -22,5 +22,14 @@ Hva er arbeidsmengden for disse to kodesekvensene, angitt med O-notasjon, hvis d
 ### SVAR:
 
 1. array med binær:
-- add
-- contains
+- add: O(n)
+- contains: O(n)
+
+Arbeidsmengde:
+- add: O(n^2)
+- contains: O(n^2)
+
+2. lenket liste:
+- samme som forrige oppgave
+
+3. 
