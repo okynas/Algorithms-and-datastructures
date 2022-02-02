@@ -9,32 +9,23 @@ public class Main {
             snu(s.substring(0, n-1), n-1);
         }
     }
+    
+    public static void kombinasjon(String s) {
 
-    public static String removeDuplicates(String s) {
-        char[] chars = s.toCharArray();
-        Set<Character> charSet = new LinkedHashSet<>();
-        for (char c: chars) {
-            charSet.add(c);
+        int n = s.length();
+        if (n > 1) {
+            for (int i = 1; i < n; i++) {
+                System.out.println(s.substring(0, 1) + s.substring(i, i+1));
+            }
+            kombinasjon(s.substring(1,n));
         }
-
-        StringBuilder stringBuilder = new StringBuilder();
-        for (Character character : charSet) {
-            stringBuilder.append(character);
-        }
-
-        return stringBuilder.toString();
-    }
-
-    public static void metode2(String s) {
-        System.out.println(removeDuplicates(s));
-
     }
 
     public static void main(String[] args) {
         String input = "grebiøH";
         // snu(input, input.length());
 
-        metode2("ACEGAEDAGTEA");
+        kombinasjon("ACEGAEDAGTEA");
     }
 
 }
