@@ -13,5 +13,3 @@ Skriv en rekursiv metode med samme argumenter som metoden i punkt 1, som skriver
       AC AE AG CE CG EG 
 
 Klarer du å lage en iterativ variant av denne metoden?
-
-## Svar

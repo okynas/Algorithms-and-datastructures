@@ -9,8 +9,8 @@ Alle oppgavene her gir trening i bruk av rekursiv tankegang og programmering. Hv
 - [x] Oppgave 4
 - [ ] Oppgave 5
 - [x] Oppgave 6
-- [ ] Oppgave 7
-- [ ] Oppgave 8
+- [x] Oppgave 7
+- [x] Oppgave 8
 
 ## Oppgave 1
 
@@ -128,7 +128,7 @@ et "hakk" nedover, til delvektoren
 
     x[0, 1, 2,..., n-2]
 
-    x[0] blir da satt lik x[1], x[1] blir satt lik x[2] osv. Deretter skal den "gamle" verdien av x[0] lagres i x[n-1]. Rekkefølgen av elementene i delvektoren:
+x[0] blir da satt lik x[1], x[1] blir satt lik x[2] osv. Deretter skal den "gamle" verdien av x[0] lagres i x[n-1]. Rekkefølgen av elementene i delvektoren:
 
     x[0, 1, 2,..., n-2]
 

@@ -9,7 +9,7 @@ public class Main {
             snu(s.substring(0, n-1), n-1);
         }
     }
-    
+
     public static void kombinasjon(String s) {
 
         int n = s.length();
