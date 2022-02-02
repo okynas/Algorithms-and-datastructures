@@ -13,7 +13,7 @@
 - [x] Queue
 - [x] Radix Sort
 - [x] Lister
-- [ ] Rekursiv Programmering
+- [x] Rekursiv Programmering
 - [ ] Backtracking
 - [ ] Søking
 - [ ] Sortering

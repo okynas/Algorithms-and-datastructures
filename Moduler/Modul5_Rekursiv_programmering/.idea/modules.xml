@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Modul5_Rekursiv_programmering.iml" filepath="$PROJECT_DIR$/.idea/Modul5_Rekursiv_programmering.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Oppgave1/Oppgave1.iml" filepath="$PROJECT_DIR$/Oppgave1/Oppgave1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Oppgave2/Oppgave2.iml" filepath="$PROJECT_DIR$/Oppgave2/Oppgave2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Oppgave3/Oppgave3.iml" filepath="$PROJECT_DIR$/Oppgave3/Oppgave3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Oppgave4/Oppgave4.iml" filepath="$PROJECT_DIR$/Oppgave4/Oppgave4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Oppgave5/Oppgave5.iml" filepath="$PROJECT_DIR$/Oppgave5/Oppgave5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Oppgave6/Oppgave6.iml" filepath="$PROJECT_DIR$/Oppgave6/Oppgave6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Oppgave7/Oppgave7.iml" filepath="$PROJECT_DIR$/Oppgave7/Oppgave7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Oppgave8/Oppgave8.iml" filepath="$PROJECT_DIR$/Oppgave8/Oppgave8.iml" />
+    </modules>
+  </component>
+</project>

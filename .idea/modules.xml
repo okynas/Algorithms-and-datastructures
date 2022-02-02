@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Algoritmer.iml" filepath="$PROJECT_DIR$/Algoritmer.iml" />
       <module fileurl="file://$PROJECT_DIR$/Moduler/Modul3_Queue_RadixSort/Modul3_Queue_RadixSort.iml" filepath="$PROJECT_DIR$/Moduler/Modul3_Queue_RadixSort/Modul3_Queue_RadixSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Moduler/Module5_rekursjon.iml" filepath="$PROJECT_DIR$/Moduler/Module5_rekursjon.iml" />
       <module fileurl="file://$PROJECT_DIR$/Moduler/Moduler.iml" filepath="$PROJECT_DIR$/Moduler/Moduler.iml" />
       <module fileurl="file://$PROJECT_DIR$/Obligatoriske Oppgaver.iml" filepath="$PROJECT_DIR$/Obligatoriske Oppgaver.iml" />
       <module fileurl="file://$PROJECT_DIR$/Moduler/Modul2_Stack/Oppgave1/Oppgave1.iml" filepath="$PROJECT_DIR$/Moduler/Modul2_Stack/Oppgave1/Oppgave1.iml" />
