@@ -19,4 +19,4 @@ Skriv om programmet for å [traversere en labyrint](https://it.hiof.no/algdat/ko
 
 ### c)
 
-Skriv om programmet for å traversere en labyrint (Lenker til en ekstern side.), slik at programmet i stedet for å skrive ut hele labyrinten, skriver ut alle stegene (dvs. alle rutene som vi er innom) på veien fra rute (0,0) til (n-1,n-1) (på samme måte som for oblig. 2, springerproblemet).
+Skriv om programmet for å traversere en labyrint, slik at programmet i stedet for å skrive ut hele labyrinten, skriver ut alle stegene (dvs. alle rutene som vi er innom) på veien fra rute (0,0) til (n-1,n-1) (på samme måte som for oblig. 2, springerproblemet).

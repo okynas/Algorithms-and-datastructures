@@ -2,6 +2,9 @@
 
 ### Oppgaver
 - [x] Oppgave 1
+  - [x] a)
+  - [x] b)
+  - [ ] c)
 - [ ] Oppgave 2
 - [ ] Oppgave 3
 - [ ] Oppgave 4
