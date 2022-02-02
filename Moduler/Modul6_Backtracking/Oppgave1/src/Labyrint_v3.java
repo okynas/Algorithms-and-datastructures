@@ -3,10 +3,8 @@ import java.util.Scanner;
 
 public class Labyrint_v3 {
     // Verdiene som kan lagres i labyrinten
-        int STENGT = 0,
-            FRI = 1,
-            BRUKT = 2,
-            VEI = 3;
+        int STENGT = 0, FRI = 1,BRUKT = 2,VEI = 3,HOYRE = 4,NED=5, VENSTRE=6, OPP=7;
+    ;
 
         // StÃ¸rrelse pÃ¥ kvadratisk labyrint og 2D-tabell som lagrer
         // labyrinten
@@ -53,8 +51,9 @@ public class Labyrint_v3 {
             int dI[] = {  0,  1,  0, -1};
             int dJ[] = {  1,  0, -1,  0};
 
-            for (int k = 0; k < 4; k++)
-            {
+            int retning[] = {HOYRE, NED, VENSTRE, OPP};
+
+            for (int k = 0; k < 4; k++) {
                 int nyI = i + dI[k];
                 int nyJ = j + dJ[k];
 
@@ -62,13 +61,13 @@ public class Labyrint_v3 {
                 if (nyI >=0 && nyI < n && nyJ >=0 && nyJ < n && L[nyI][nyJ] == FRI)
                 {
                     // PrÃ¸ver Ã¥ finne vei videre rekursivt
-                    if (finnVei(nyI, nyJ))
-                    {
+                    if (finnVei(nyI, nyJ)) {
                         // Her vet vi at det ble funnet en vei gjennom
                         // labyrinten fra rute (i,j). Merker av at (i,j)
                         // ligger pÃ¥ denne veien og stopper deretter videre
                         // leting etter vei ved Ã¥ returnere true
-                        L[i][j] = VEI;
+                        // System.out.println(k);
+                        L[i][j] = retning[k];
                         return true;
                     }
                 }
@@ -87,7 +86,15 @@ public class Labyrint_v3 {
             for (int i = 0; i < n; i++)
             {
                 for (int j = 0; j < n; j++)
-                    if (L[i][j] == VEI)
+                    if (L[i][j]==HOYRE)
+                        result += "> ";
+                    else if (L[i][j] == NED)
+                        result += "V ";
+                    else if (L[i][j] == VENSTRE)
+                        result += "< ";
+                    else if (L[i][j] == OPP)
+                        result += "^ ";
+                    else if (L[i][j] == VEI)
                         result += "* ";
                     else
                         result += L[i][j] + " ";
