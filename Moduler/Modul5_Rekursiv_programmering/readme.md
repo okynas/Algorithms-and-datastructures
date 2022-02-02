@@ -6,7 +6,7 @@ Alle oppgavene her gir trening i bruk av rekursiv tankegang og programmering. Hv
 - [x] Oppgave 1
 - [x] Oppgave 2
 - [x] Oppgave 3
-- [ ] Oppgave 4
+- [x] Oppgave 4
 - [ ] Oppgave 5
 - [ ] Oppgave 6
 - [ ] Oppgave 7
