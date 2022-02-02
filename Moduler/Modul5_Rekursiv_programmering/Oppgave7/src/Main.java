@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 public class Main {
     public static void snu(String s, int n) {
@@ -8,13 +10,31 @@ public class Main {
         }
     }
 
-    public static void metode2() {
+    public static String removeDuplicates(String s) {
+        char[] chars = s.toCharArray();
+        Set<Character> charSet = new LinkedHashSet<>();
+        for (char c: chars) {
+            charSet.add(c);
+        }
+
+        StringBuilder stringBuilder = new StringBuilder();
+        for (Character character : charSet) {
+            stringBuilder.append(character);
+        }
+
+        return stringBuilder.toString();
+    }
+
+    public static void metode2(String s) {
+        System.out.println(removeDuplicates(s));
 
     }
 
     public static void main(String[] args) {
         String input = "grebiøH";
-        snu(input, input.length());
+        // snu(input, input.length());
+
+        metode2("ACEGAEDAGTEA");
     }
 
 }
