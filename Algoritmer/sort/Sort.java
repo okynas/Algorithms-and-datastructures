@@ -31,4 +31,19 @@ public class Sort {
             A[j] = key;
         }
     }
+
+    public static void BubbleSort(int[] A) {
+        int n = A.length;
+        int temp;
+
+        for (int i = 0; i<n; i++) {
+            for (int j = n-1; j>i; j--) {
+                if (A[j] < A[j-1]) {
+                    temp = A[j];
+                    A[j] = A[j-1];
+                    A[j-1] = temp;
+                }
+            }
+        }
+    }
 }
