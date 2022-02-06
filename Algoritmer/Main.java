@@ -2,6 +2,7 @@ import List.OrderedList;
 import List.UnorderedList;
 import Queue.QueueInt;
 import RadixSort.RadixSortInt;
+import Search.Search;
 import Stack.*;
 
 import java.util.Random;
@@ -38,7 +39,7 @@ public class Main {
 
         // radix(args); // krever at man kjører "java Main 10 10" f.eks.
 
-        UnorderedList<Integer> list = new UnorderedList(10);
+        /*UnorderedList<Integer> list = new UnorderedList(10);
         list.addToFront(5);
         list.addToRear(4);
         list.addToRear(7);
@@ -60,7 +61,12 @@ public class Main {
         ol.add(2);
         System.out.println(ol);
 
-        System.out.println(ol.contains(2));
+        System.out.println(ol.contains(2));*/
+
+        int[] array = {1,2,3,4,5,6,7,8,9,10,11,12,15,19,20,25,29,31,38,44,48,55,59,61,66,72,78,90,99,104};
+
+        boolean s = Search.interpolationSearch(array, 44);
+        System.out.println(s);
     }
 
     public static void radix(String[] args) {
