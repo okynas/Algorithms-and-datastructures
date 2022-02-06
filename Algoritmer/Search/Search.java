@@ -3,6 +3,22 @@ package Search;
 public class Search {
 
     public static boolean binarySearch(int[] array, int x) {
+        int n = array.length;
+        int min = 0, max = n-1, mid = 0;
+
+        while(max >= min) {
+            mid = (min + max) / 2;
+            if (array[mid] == x) {
+                return true;
+            }
+
+            if (x < array[mid]) {
+                max = mid - 1;
+            } else {
+                min = mid + 1;
+            }
+        }
+
         return false;
     }
 
