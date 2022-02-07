@@ -96,4 +96,25 @@ public class Sort {
             }
         }
     }
+
+    /**
+     *
+     * @param A, array som skal sorteres
+     * @param min, minste tall som er i arrayen
+     * @param max, største tallet som er i arrayen.
+     */
+    public static void QuickSort(int[]A, int min, int max) {
+
+        int indexOfPartition;
+        if (min - max > 0) {
+            indexOfPartition = Partition(A, min, max);
+
+            QuickSort(A, min, indexOfPartition - 1);
+            QuickSort(A, indexOfPartition + 1, max);
+        }
+    }
+
+    private static int Partition(int[]A, int min, int max) {
+        return 0;
+    }
 }
