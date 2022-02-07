@@ -115,6 +115,30 @@ public class Sort {
     }
 
     private static int Partition(int[]A, int min, int max) {
-        return 0;
+        int left, right, temp, partitionElement;
+        partitionElement = A[min];
+        left = min;
+        right = max;
+
+        while (left < right) {
+            while (A[left] <= partitionElement && left < right) {
+                left++;
+            }
+            while (A[right] > partitionElement) {
+                right--;
+            }
+
+            if (left < right) {
+                temp = A[left];
+                A[left] = A[right];
+                A[right] = temp;
+            }
+        }
+
+        temp = A[min];
+        A[min] = A[right];
+        A[right] = temp;
+
+        return right;
     }
 }
