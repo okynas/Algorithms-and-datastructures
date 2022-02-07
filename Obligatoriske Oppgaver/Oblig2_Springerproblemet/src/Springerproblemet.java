@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * .------.         _____ _                       _
  * |S.--. |        / ____| |                     | |
@@ -18,10 +20,10 @@ public class Springerproblemet {
     /**
      * Definerer variabler som skal bli brukt igjennom hele koden
      */
-    public static int n;
-    public static int[][] sjakkBrettet;
-    public static int[][] trekk;
-    public static int[][] utskrift;
+    public static int n; // størrelsen på brettet
+    public static int[][] sjakkBrettet; // selve brettet
+    public static int[][] trekk; // brukes for å skrive ut trekk tuple (x,y)
+    public static int[][] utskrift; // brukes for å skrive ut trekk på brettet.
 
     public static final int LEDIG = 0, BRUKT = 1;
     public static final int[] X = {2, 2, 1, -1, -2, -2, -1, 1};
@@ -46,7 +48,6 @@ public class Springerproblemet {
         this.n = n;
         sjakkBrettet = new int[n][n];
         trekk = new int[n*n][2];
-
         utskrift = new int[n][n];
 
         /**
@@ -172,6 +173,9 @@ public class Springerproblemet {
     @Override
     public String toString() {
         StringBuilder s = new StringBuilder();
+
+        s.append("\n ================= \n");
+
         s.append("\nEach step the knight has taken: \n");
         for (int i=0; i < n*n - 1; i++) {
             s.append("(").append(trekk[i][0]).append(", ").append(trekk[i][1]).append(") -> (").append(trekk[i + 1][0]).append(", ").append(trekk[i + 1][1]).append(")\n");
@@ -226,7 +230,20 @@ public class Springerproblemet {
      */
     public static void main(String[] args) {
         printKnight();
-        Springerproblemet springerproblemet = new Springerproblemet(5);
+
+        Scanner in = new Scanner(System.in);
+        System.out.println("How big chess-board do you want to try to solve?");
+        int input = in.nextInt();
+
+        if (input < 0) {
+            System.out.println("Chess board is too smal, we adjust it to 1x1");
+            input = 1;
+        }
+        else if (input >= 7) {
+            System.out.println("Chess board is too big, we adjust it to 7x7!");
+            input = 7;
+        }
+        Springerproblemet springerproblemet = new Springerproblemet(input);
         System.out.println(springerproblemet);
         printMoves();
     }
