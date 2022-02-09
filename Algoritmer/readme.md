@@ -9,6 +9,9 @@ En algoritme er i matematikk og informatikk en presis beskrivelse av en endelig 
 - list
 - stack
 - radix sort
+- reccursion
+- search
+- sort
 
 ## Bilder:
 

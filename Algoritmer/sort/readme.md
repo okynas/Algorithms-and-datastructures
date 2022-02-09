@@ -10,9 +10,12 @@ Effektiv sortering er viktig for å finne elementer i en sortert liste enklere
 ikke alle algoritmer kan blir brukt i alle sammenhenger.
 
 ## Metoder:
-- binarySearch
-- sequentialSearch
-- interpolationSearch
+- SelectionSort
+- InsertionSort
+- BubbleSort
+- ShellSort
+- QuickSort
+  - Partition
 
 ## Bilder:
 
