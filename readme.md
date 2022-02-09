@@ -15,7 +15,7 @@
 - [x] Lister
 - [x] Rekursiv Programmering
 - [x] Backtracking
-- [ ] Søking
+- [x] Søking
 - [ ] Sortering
 - [ ] Sekvensiell sorteringsalgoritme
 - [ ] Shell sort
