@@ -14,7 +14,7 @@
 - [x] Radix Sort
 - [x] Lister
 - [x] Rekursiv Programmering
-- [ ] Backtracking
+- [x] Backtracking
 - [ ] Søking
 - [ ] Sortering
 - [ ] Sekvensiell sorteringsalgoritme
