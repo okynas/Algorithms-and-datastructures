@@ -6,8 +6,8 @@ En oversikt over alle modulene innenfor faget **Algoritmer og datastrukturer**
 - [x] Queue
 - [x] Radix Sort
 - [x] Lister
-- [] Rekursiv Programmering
-- [ ] Backtracking
+- [x] Rekursiv Programmering
+- [x] Backtracking
 - [ ] Søking
 - [ ] Sortering
 - [ ] Sekvensiell sorteringsalgoritme
