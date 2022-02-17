@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Modul6_Backtracking.iml" filepath="$PROJECT_DIR$/.idea/Modul6_Backtracking.iml" />
       <module fileurl="file://$PROJECT_DIR$/Oppgave1/Oppgave1.iml" filepath="$PROJECT_DIR$/Oppgave1/Oppgave1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Oppgave2/Oppgave2.iml" filepath="$PROJECT_DIR$/Oppgave2/Oppgave2.iml" />
     </modules>
   </component>
 </project>
