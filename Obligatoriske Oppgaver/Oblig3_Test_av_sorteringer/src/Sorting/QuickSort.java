@@ -1,3 +1,5 @@
+package Sorting;
+
 public class QuickSort {
     public static void Sort(int[]A, int min, int max) {
 
