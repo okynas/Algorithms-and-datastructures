@@ -1,3 +1,5 @@
+package Sorting;
+
 public class MergeSort {
     public static void sort(int[] A, int min, int max) {
         if (min == max) {

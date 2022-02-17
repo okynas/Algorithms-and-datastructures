@@ -4,7 +4,6 @@ import java.util.Scanner;
 public class Labyrint_v3 {
     // Verdiene som kan lagres i labyrinten
         int STENGT = 0, FRI = 1,BRUKT = 2,VEI = 3,HOYRE = 4,NED=5, VENSTRE=6, OPP=7;
-    ;
 
         // StÃ¸rrelse pÃ¥ kvadratisk labyrint og 2D-tabell som lagrer
         // labyrinten
