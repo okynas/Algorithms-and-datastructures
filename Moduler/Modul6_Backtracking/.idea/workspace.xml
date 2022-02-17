@@ -34,7 +34,7 @@
     <property name="jdk.selected.JAVA_MODULE" value="17" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Application.Oppgave1b">
+  <component name="RunManager" selected="Application.Oppgave5">
     <configuration name="Oppgave1" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -62,10 +62,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Oppgave2" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="TilfeldigPermutasjon" />
+      <module name="Oppgave2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Oppgave5" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="FordelingLeker" />
+      <module name="Oppgave5" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Oppgave1_v2" />
       <item itemvalue="Application.Oppgave1" />
       <item itemvalue="Application.Oppgave1b" />
+      <item itemvalue="Application.Oppgave2" />
+      <item itemvalue="Application.Oppgave5" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
