@@ -18,33 +18,44 @@ public class Main {
     }
 
     public static void startTest() {
-        // antall tall som skal sorteres
-        int n = 0;
+        int n;
+        long time;
+
         Scanner in = new Scanner(System.in);
 
-        System.out.println("Of what size should the elements be (n=?): ");
-
+        System.out.print("Of what size should the elements be (n=?): ");
         n = in.nextInt();
-        System.out.println(n);
+
+        if (n > MAX_N) {
+            System.out.println("N elements is too large.");
+            System.exit(1);
+        }
+
+        int[] numberToBeSorted = new int[n];
 
         // hvilken metode som skal brukes
         System.out.println("Which algorithm do you want to sort?: ");
         System.out.print("1. QuickSort, 2. MergeSort, 3. RadixSort, 4. InsertionSort: ");
-
         int algorithm = in.nextInt();
 
-        System.out.println(algorithm);
+        if (algorithm < 1 || algorithm >= 5) {
+            System.out.println("Algorithm not accepted");
+            System.exit(1);
+        }
 
         // hvilken operasjon:
         System.out.println("What to you want to test:");
         System.out.print("1. Time, 2. Constant: ");
 
         int programToRun = in.nextInt();
-        System.out.println(programToRun);
+
+        if (programToRun < 1 || programToRun >= 3) {
+            System.out.println("Program not accepted");
+            System.exit(1);
+        }
+
         // Utføre sortering
         if (programToRun == 1) {
-            int[] numberToBeSorted = new int[n];
-            long time;
 
             if (algorithm == 1) {
                 randomize(numberToBeSorted);
@@ -55,7 +66,7 @@ public class Main {
             } else if (algorithm == 2) {
                 randomize(numberToBeSorted);
                 time = System.currentTimeMillis();
-                MergeSort.sort(numberToBeSorted, 0, 2*n);
+                MergeSort.sort(numberToBeSorted, 0, n-1);
                 time = System.currentTimeMillis() - time;
                 System.out.printf("Merge Sort\t: %6.3f s\n", time /1000.0);
             } else if (algorithm == 3) {
@@ -65,7 +76,8 @@ public class Main {
                 RadixSortInt.sort(numberToBeSorted, maxDigit);
                 time = System.currentTimeMillis() - time;
                 System.out.printf("Radix Sort\t: %6.3f s\n", time /1000.0);
-            } else if (algorithm == 4) {
+            } else {
+                // alrogithm = 4
                 if (n <= MAX_SEQ) {
                     randomize(numberToBeSorted);
                     time = System.currentTimeMillis();
@@ -77,16 +89,11 @@ public class Main {
                     System.exit(1);
                 }
 
-            } else {
-                System.out.println("Not accepted");
-                System.exit(1);
             }
 
         }
         // Estimere konstant c
-        else if (programToRun == 2) {
-            int[] numberToBeSorted = new int[n];
-            long time = 0;
+        else {
             if (algorithm == 1) {
                 // C = T/(nlog(n)).
                 randomize(numberToBeSorted);
@@ -94,43 +101,41 @@ public class Main {
                 QuickSort.Sort(numberToBeSorted, 0, 2*n);
                 time = System.currentTimeMillis() - time;
 
-                System.out.printf("Quick Sort\t: %6.3f s\n t/n log(n): ", time /(n * Math.log10(n)));
+                System.out.printf("Quick Sort\t: %6.3f \n c=t/n log(n): ", time /(n * Math.log10(n)));
 
             } else if (algorithm == 2) {
                 randomize(numberToBeSorted);
                 time = System.currentTimeMillis();
-                MergeSort.sort(numberToBeSorted, 0, 2*n);
+                MergeSort.sort(numberToBeSorted, 0, n-1);
                 time = System.currentTimeMillis() - time;
-                System.out.printf("Merge Sort\t: %6.3f s\n", time /1000.0);
-            } else if (algorithm == 3) {
-                int maxDigit = (int) Math.log10(n);
-                randomize(numberToBeSorted);
-                time = System.currentTimeMillis();
-                RadixSortInt.sort(numberToBeSorted, maxDigit);
-                time = System.currentTimeMillis() - time;
-                System.out.printf("Radix Sort\t: %6.3f s\n t/n", (double) (time / n) );
 
-            } else if (algorithm == 4) {
-                if (n <= MAX_SEQ) {
-                    randomize(numberToBeSorted);
-                    time = System.currentTimeMillis();
+                System.out.printf("Merge Sort\t: %6.3f \n c=t/n log(n): ", time /(n * Math.log10(n)));
+
+            } else if (algorithm == 3) {
+                        int maxDigit = (int) Math.log10(n);
+                        randomize(numberToBeSorted);
+                        time = System.currentTimeMillis();
+                        RadixSortInt.sort(numberToBeSorted, maxDigit);
+                        time = System.currentTimeMillis() - time;
+
+                        System.out.printf("Radix Sort\t: %6.3f \n c=t/n", (double) (time / n) );
+
+                    } else {
+                        if (n <= MAX_SEQ) {
+                            randomize(numberToBeSorted);
+                            time = System.currentTimeMillis();
                     InsertionSort.Sort(numberToBeSorted);
                     time = System.currentTimeMillis() - time;
-                    System.out.printf("Insertion Sort\t: %6.3f s\n", time /1000.0);
+
+                    // System.out.printf("Insertion Sort\t: %6.3f s\n", time /1000.0);
+                    System.out.printf("Insertion Sort\t: %6.3f \n c=t/n^2", (double) (time / (long) n*n ) );
+
                 } else {
                     System.out.println("Number of elements to be sorted is too, big\n The work is O(n^2)");
                     System.exit(1);
                 }
 
-            } else {
-                System.out.println("Not accepted");
-                System.exit(1);
             }
-        }
-
-        else {
-            System.out.println("Invalid program");
-            System.exit(1);
         }
 
     }
@@ -141,9 +146,15 @@ public class Main {
         } while(query("\n Test again?"));
     }
 
-    static boolean query(String input) {
+    public static void printList(int[] list) {
+        for (Integer i : list) {
+            System.out.print(i + " ");
+        }
+    }
+
+    static boolean query(String str) {
         String answer;
-        System.out.println(input + "[Y or N]: ");
+        System.out.println(str + "[Y or N]: ");
         Scanner sc = new Scanner(System.in);
 
         answer = sc.nextLine().toUpperCase();
