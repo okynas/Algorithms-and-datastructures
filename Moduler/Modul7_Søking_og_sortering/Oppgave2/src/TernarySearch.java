@@ -4,22 +4,6 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class TernarySearch {
-<<<<<<< Updated upstream
-    public static int Iterative(int[] A, int x) {
-        int n = A.length;
-        int i2 = n/3;
-        int i3 = 2*n/3;
-
-        if (x < i2) {
-            // elementet x ligger mellom index 0 og 1/3
-            return 1
-        } else if ( x > i2 && x < i3) {
-            // element x ligger mellom index 1/3 og 2/3
-            return 2;
-        } else {
-            // element x ligger mellom index 2/3 og n-1
-            return 3;
-=======
 
     public static long N_COMPS;
 
@@ -72,23 +56,25 @@ public class TernarySearch {
 
         if (n > 2) {
 
-            int one_third = min + n/3;
-            int two_thirds = one_third + n/3;
+            int one_third = min + n / 3;
+            int two_thirds = one_third + n / 3;
 
             if (A[one_third] == x && A[two_thirds] == x) {
                 return true;
             }
 
-            if ( x < A[one_third]) {
+            if (x < A[one_third]) {
                 Recursive(A, x, min, one_third - 1);
-            } else if (x > A[two_thirds]){
+            } else if (x > A[two_thirds]) {
                 Recursive(A, x, two_thirds + 1, max);
             } else {
                 Recursive(A, x, one_third + 1, two_thirds - 1);
             }
->>>>>>> Stashed changes
+
         }
-        return 0;
+
+        return false;
+
 
     }
 }
