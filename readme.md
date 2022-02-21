@@ -16,10 +16,10 @@
 - [x] Rekursiv Programmering
 - [x] Backtracking
 - [x] Søking
-- [ ] Sortering
-- [ ] Sekvensiell sorteringsalgoritme
-- [ ] Shell sort
-- [ ] Logaritmiske sorteringsalgoritmer
+- [x] Sortering
+  - [x] Sekvensiell sorteringsalgoritme
+  - [x] Shell sort
+  - [x] Logaritmiske sorteringsalgoritmer
 - [ ] Binær trær
 - [ ] Binær søketrær
 - [ ] Selvbalanserende søketrær
