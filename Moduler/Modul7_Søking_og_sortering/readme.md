@@ -2,7 +2,11 @@
 
 ### Oppgaver
 - [x] Oppgave 1
-- [ ] Oppgave 2
+- [x] Oppgave 2
+  - [x] Oppgave a
+  - [x] Oppgave b
+  - [x] Oppgave c
+  - [x] Oppgave d
 - [ ] Oppgave 3
 - [ ] Oppgave 4
 - [ ] Oppgave 5
@@ -18,6 +22,15 @@ I et ternært søk deler vi (det gjenværende segmentet av) arrayen opp i tre (o
 - Programmer en rekursiv versjon av ternært søk i en array med heltall.
 - Lag et testprogram (Lenker til en ekstern side.) som sammenligner effektiviteten av ternært søk og binærsøk, for store verdier av n.
 - Ternært søk er ikke mer effektivt enn binærsøk, selv om den ternære algoritmen "kvitter seg med" 2/3 av de gjenværende elementene i hvert steg. Hvorfor?
+
+
+### SVAR
+#### 2D
+Ternært søk er ikke mer effektivt enn binærsøk, selv om den ternære algoritmen "kvitter seg med" 2/3 av de gjenværende elementene i hvert steg. Hvorfor?
+
+Det er ingenting å tjene på tærtiært iforhold til binærsøk.
+Det er ekstra arbeid og testing som må gjøres for hver oppdeling gjør at total arbeidsmenge blir den samme
+selv om antall rekursive kall er mindre for ternært søk.
 
 
 ## Oppgave 3
