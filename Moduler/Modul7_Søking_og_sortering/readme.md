@@ -8,10 +8,10 @@
   - [x] Oppgave c
   - [x] Oppgave d
 - [ ] Oppgave 3
-- [ ] Oppgave 4
-- [ ] Oppgave 5
-- [ ] Oppgave 6
-- [ ] Oppgave 7
+- [x] Oppgave 4
+- [x] Oppgave 5
+- [x] Oppgave 6
+- [x] Oppgave 7
 ## Oppgave 1
 Skriv en rekursiv versjon av binærsøk (Lenker til en ekstern side.).
 
@@ -42,32 +42,36 @@ Vis hvordan arrayen forandres etter hvert "hovedsteg" (du bestemmer selv hva "ho
 
 - Innstikksortering
 - Shell sort med "gaps" 5, 3 og 1
-- Flettesortering
+- Flettesortering / Mergesort
 - Quicksort, med elementet i midten som partisjoneringselement
 
 ## Oppgave 4
 Anta at alle elementene i en array av lengde n er like. Hva er da kjøretiden til følgende sorteringsalgoritmer:
 
-- Innstikksortering
-- Shell sort
-- Flettesortering
-- Quicksort
+- Innstikksortering = O(n)
+- Shell sort = O(n log n)
+- Flettesortering = O(n log n) uansett hvordan verdiene i vektoren/arrayen er.
+- Quicksort = O(n^2) fordi ene delmengden alltid blir tom når elementene er like.
 
 ## Oppgave 5
 Anta at alle elementene i en array av lengde n allerede er sortert. Hva er da kjøretiden til følgende sorteringsalgoritmer:
 
-Innstikksortering
-Shell sort
-Flettesortering
-Quicksort
+- Innstikksortering = O(n)
+- Shell sort = O(n log n)
+- Flettesortering = O(n log n)
+- Quicksort =>
+  1. første element = O(n^2)
+  2. n/2 element = O(n log n)
 
 ## Oppgave 6
 Anta at alle elementene i en array av lengde n allerede er sortert, men i omvendt rekkefølge. Hva er da kjøretiden til følgende sorteringsalgoritmer:
 
-- Innstikksortering
-- Shell sort
-- Flettesortering
-- Quicksort
+- Innstikksortering = O(n^2), indre løkka må nå kjøres
+- Shell sort = O(n log n)
+- Flettesortering = O(n log n)
+- Quicksort => 
+  1. første element = O(n^2)
+  2. n/2 element = O(n log n)
 
 ## Oppgave 7
 Standard flettesortering brukes lite til sortering av arrayer, fordi det kreves en ekstra hjelpearray til å flette sammen de to sorterte arraybitene. Derimot er flettesortering glimrende til å sortere lenkede lister, fordi flettingen kan gjøres ved bare å manipulere neste-pekerne i listen uten at det trengs noe ekstra lagerplass.
