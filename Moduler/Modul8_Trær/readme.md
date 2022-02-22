@@ -1,4 +1,12 @@
 # 8.4: Øvingsoppgaver
+
+### Oppgaver
+- [x] Oppgave 1
+- [x] Oppgave 2
+- [x] Oppgave 3
+- [ ] Oppgave 4
+- [ ] Oppgave 5
+
 ## Oppgave 1
 Følgende binære tre er gitt:
 
@@ -94,6 +102,10 @@ brukes på følgende binære tre?
           d   e
 
 Vi antar at den kalles med en referanse til roten i dette treet, og at variabelen "element" i hver node inneholder et enkelt tegn som i figuren.
+
+### SVAR:
+
+    abbdddbaceeecca
 
 ## Oppgave 4
 Nodene i et binært tre inneholder bare et enkelt heltall, samt referanser til høyre og venstre barn:
