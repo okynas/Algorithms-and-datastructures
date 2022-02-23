@@ -5,11 +5,11 @@
   - [x] a
   - [x] b
   - [x] c
-- [ ] Oppgave 2
+- [x] Oppgave 2
   - [x] a
   - [x] b
-  - [ ] c
-  - [ ] d
+  - [x] c
+  - [x] d
 - [ ] Oppgave 3
 - [ ] Oppgave 4
 - [ ] Oppgave 5

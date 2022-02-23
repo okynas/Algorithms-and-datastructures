@@ -1,3 +1,5 @@
+import javax.swing.tree.TreeModel;
+
 /**
  * Oppgave 2
  * Dette er en tidligere eksamensoppgave.
@@ -27,7 +29,7 @@ public class TreNode {
 
     public int verdi;              // Heltallsverdi som lagres i hver node
     public char bokstav;	      // Bokstav/tegn som lagres i hver node
-    private int sum; 		      // Brukes bare i oppgave c)
+    public int sum; 		      // Brukes bare i oppgave c)
     public TreNode v, h;	      // Venstre og høyre barn
     public TreNode forelder;      // Brukes bare i oppgave d)
 
@@ -57,6 +59,63 @@ public class TreNode {
                 }
                 skriv_bokstav(rot.h, x);
             }
+        }
+    }
+
+    /**
+     * Hver av nodene i søketreet har, i tillegg til variabelen verdi som inneholder nodens nøkkelverdi, også en heltallsvariabel sum.
+     * I denne oppgaven antar vi at variabelen sum i utgangspunktet er satt lik 0 (null) i alle noder. Lag en metode:
+     *
+     *  void sett_sum(tre_node rot)
+     *
+     *  som, for hver node i søketreet, setter variabelen sum lik summen av alle (nøkkel)verdiene i nodens subtrær
+     *  pluss verdien (av variabelen verdi) i noden selv.
+     *
+     *  Parameteren rot er her til roten i søketreet. Metoden sett_sum skal være rekursiv.
+     *
+     * @param rot, roten i søketreet.
+     */
+    public void sett_sum(TreNode rot) {
+        if (rot != null) {
+            sett_sum(rot.v);
+            sett_sum(rot.h);
+
+            rot.sum = rot.verdi;
+            if (rot.v != null) {
+                rot.sum += rot.v.sum;
+            }
+
+            if (rot.h != null) {
+                rot.sum += rot.h.sum;
+            }
+        }
+    }
+
+    /**
+     * I denne oppgaven skal du lage en metode:
+     *
+     * 	void sett_forelder(tre_node rot)
+     *
+     * som, for hver node i søketreet, setter variabelen forelder til å referere til nodens forgjenger
+     * (foreldernode) i treet. Du kan anta at forelder i utgangspunktet har en vilkårlig (ikke bestemt)
+     * verdi i hver node. Roten i treet (representert ved parameteren rot), skal få forelder satt lik null.
+     *
+     * @param rot, roten i søketreet.
+     */
+    public void sett_forelder(TreNode rot) {
+        if (rot != null) {
+            sett_forelder(rot.v);
+            sett_forelder(rot.h);
+
+            if (rot.v != null) {
+                rot.v.forelder = rot;
+            }
+
+            if (rot.h != null) {
+                rot.h.forelder = rot;
+            }
+
+            rot.forelder = null;
         }
     }
 }
