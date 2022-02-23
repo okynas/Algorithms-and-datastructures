@@ -11,6 +11,9 @@
   - [x] c
   - [x] d
 - [ ] Oppgave 3
+  - [x] a
+  - [ ] b
+  - [ ] c
 - [ ] Oppgave 4
 - [ ] Oppgave 5
 
