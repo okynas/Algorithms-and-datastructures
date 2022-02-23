@@ -6,6 +6,10 @@
   - [x] b
   - [x] c
 - [ ] Oppgave 2
+  - [x] a
+  - [x] b
+  - [ ] c
+  - [ ] d
 - [ ] Oppgave 3
 - [ ] Oppgave 4
 - [ ] Oppgave 5
