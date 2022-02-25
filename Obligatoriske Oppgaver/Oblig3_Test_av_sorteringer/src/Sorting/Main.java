@@ -94,7 +94,7 @@ public class Main {
             if (programToRun == 1) {
                 System.out.printf("Radix Sort\t: %6.3f s\n", time /1000.0);
             } else if (programToRun == 2) {
-                System.out.printf("Radix Sort\t: %6.9f \n c=t/n", (double) (time / n) );
+                System.out.printf("Radix Sort\t: %6.9f \n c=t/n", ( (float)time / n) );
             } else {
                 System.out.println("Wrong program");
             }
@@ -111,7 +111,7 @@ public class Main {
                 if (programToRun == 1) {
                     System.out.printf("Insertion Sort\t: %6.3f s\n", time /1000.0);
                 } else if (programToRun == 2) {
-                    System.out.printf("Insertion Sort\t: %6.9f \n c=t/n^2", (double) (time / (long) n*n ) );
+                    System.out.printf("Insertion Sort\t: %6.9f \n c=t/n^2",  ( (float)time / (n*n) ) );
                 } else {
                     System.out.println("Wrong program");
                 }
