@@ -20,9 +20,9 @@
   - [x] Sekvensiell sorteringsalgoritme
   - [x] Shell sort
   - [x] Logaritmiske sorteringsalgoritmer
-- [ ] Binær trær
+- [x] Binær trær
 - [ ] Binær søketrær
-- [ ] Selvbalanserende søketrær
+  - [ ] Selvbalanserende søketrær
 - [ ] Svadagenerator
 - [ ] B-trær
 - [ ] Heap og prioriteringskø
