@@ -5,8 +5,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
-    private static final int MAX_SEQ = 100000;
-    private static final int MAX_N = 100000000;
+    private static final int MAX_SEQ = 100_000;
+    private static final int MAX_N = 100_000_000;
 
     public static void randomize(int[] A) {
         Random r = new Random();
@@ -60,7 +60,7 @@ public class Main {
             if (algorithm == 1) {
                 randomize(numberToBeSorted);
                 time = System.currentTimeMillis();
-                QuickSort.Sort(numberToBeSorted, 0, 2*n);
+                QuickSort.Sort(numberToBeSorted, 0, n-1);
                 time = System.currentTimeMillis() - time;
                 System.out.printf("Quick Sort\t: %6.3f s\n", time /1000.0);
             } else if (algorithm == 2) {
@@ -112,18 +112,18 @@ public class Main {
                 System.out.printf("Merge Sort\t: %6.3f \n c=t/n log(n): ", time /(n * Math.log10(n)));
 
             } else if (algorithm == 3) {
-                        int maxDigit = (int) Math.log10(n);
-                        randomize(numberToBeSorted);
-                        time = System.currentTimeMillis();
-                        RadixSortInt.sort(numberToBeSorted, maxDigit);
-                        time = System.currentTimeMillis() - time;
+                int maxDigit = (int) Math.log10(n);
+                randomize(numberToBeSorted);
+                time = System.currentTimeMillis();
+                RadixSortInt.sort(numberToBeSorted, maxDigit);
+                time = System.currentTimeMillis() - time;
 
-                        System.out.printf("Radix Sort\t: %6.3f \n c=t/n", (double) (time / n) );
+                System.out.printf("Radix Sort\t: %6.3f \n c=t/n", (double) (time / n) );
 
-                    } else {
-                        if (n <= MAX_SEQ) {
-                            randomize(numberToBeSorted);
-                            time = System.currentTimeMillis();
+            } else {
+                if (n <= MAX_SEQ) {
+                    randomize(numberToBeSorted);
+                    time = System.currentTimeMillis();
                     InsertionSort.Sort(numberToBeSorted);
                     time = System.currentTimeMillis() - time;
 
