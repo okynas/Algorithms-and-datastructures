@@ -8,12 +8,12 @@ En oversikt over alle modulene innenfor faget **Algoritmer og datastrukturer**
 - [x] Lister
 - [x] Rekursiv Programmering
 - [x] Backtracking
-- [ ] Søking
-  - [ ] Sortering
-  - [ ] Sekvensiell sorteringsalgoritme
-  - [ ] Shell sort
-  - [ ] Logaritmiske sorteringsalgoritmer
-- [ ] Binær trær
+- [x] Søking
+  - [x] Sortering
+  - [x] Sekvensiell sorteringsalgoritme
+  - [x] Shell sort
+  - [x] Logaritmiske sorteringsalgoritmer
+- [x] Binær trær
 - [ ] Binær søketrær
   - [ ] Selvbalanserende søketrær
 - [ ] Svadagenerator
