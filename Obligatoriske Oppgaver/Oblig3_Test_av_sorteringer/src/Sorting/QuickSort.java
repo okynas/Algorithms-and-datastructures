@@ -1,31 +1,44 @@
 package Sorting;
 
 public class QuickSort {
-    public static void Sort(int[]A, int min, int max) {
+    public static void Sort(int A[], int min, int max) {
+        // Quicksort av array med heltall
 
-        int indexOfPartition;
-        if (min - max > 0) {
-            indexOfPartition = Partition(A, min, max);
+        int indexofpartition;
 
-            Sort(A, min, indexOfPartition - 1);
-            Sort(A, indexOfPartition + 1, max);
+        if (max - min  > 0) {
+            // Partisjonerer array
+            indexofpartition = findPartition(A, min, max);
+
+            // Sorterer venstre del
+            Sort(A, min, indexofpartition - 1);
+
+            // Sorterer hÃ¸yre del
+            Sort(A, indexofpartition + 1, max);
         }
     }
 
-    private static int Partition(int[]A, int min, int max) {
-        int left, right, temp, partitionElement;
-        partitionElement = A[min];
+    private static int findPartition (int[] A, int min, int max) {
+        int left, right;
+        int temp, partitionelement;
+
+        // Bruker *fÃ¸rste* element til Ã¥ dele opp
+        partitionelement = A[min];
+
         left = min;
         right = max;
 
+        // GjÃ¸r selve partisjoneringen
         while (left < right) {
-            while (A[left] <= partitionElement && left < right) {
+            // Finn et element som er stÃ¸rre enn part.elementet
+            while (A[left] <= partitionelement && left < right)
                 left++;
-            }
-            while (A[right] > partitionElement) {
-                right--;
-            }
 
+            // Finn et element som er mindre enn part.elementet
+            while (A[right] > partitionelement)
+                right--;
+
+            // Bytt om de to hvis ikke ferdig
             if (left < right) {
                 temp = A[left];
                 A[left] = A[right];
@@ -33,10 +46,12 @@ public class QuickSort {
             }
         }
 
+        // Sett part.elementet mellom partisjoneringene
         temp = A[min];
         A[min] = A[right];
         A[right] = temp;
 
+        // Returner indeksen til part.elementet
         return right;
     }
 }
