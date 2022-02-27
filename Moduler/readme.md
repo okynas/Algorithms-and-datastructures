@@ -9,7 +9,7 @@ En oversikt over alle modulene innenfor faget **Algoritmer og datastrukturer**
 - [x] Rekursiv Programmering
 - [x] Backtracking
 - [x] Søking
-  - [x] Sortering
+- [x] Sortering
   - [x] Sekvensiell sorteringsalgoritme
   - [x] Shell sort
   - [x] Logaritmiske sorteringsalgoritmer
