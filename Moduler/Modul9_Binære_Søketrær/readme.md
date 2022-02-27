@@ -10,10 +10,10 @@
   - [x] b
   - [x] c
   - [x] d
-- [ ] Oppgave 3
+- [x] Oppgave 3
   - [x] a
-  - [ ] b
-  - [ ] c
+  - [x] b
+  - [x] c
 - [ ] Oppgave 4
 - [ ] Oppgave 5
 
