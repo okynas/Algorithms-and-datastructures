@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d6ce5eb4-ad07-490f-9727-98432e45b2dc" name="Changes" comment="" />
+    <list default="true" id="d6ce5eb4-ad07-490f-9727-98432e45b2dc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Oppgave4/Oppgave4.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Oppgave4/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Oppgave5/Oppgave5.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Oppgave5/src/BinaryTreeSearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Oppgave5/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oppgave2/src/TreNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/Oppgave2/src/TreNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,6 +41,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="17" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
@@ -39,6 +50,17 @@
       <recent name="$PROJECT_DIR$/Oppgave3" />
       <recent name="$PROJECT_DIR$/Oppgave1" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Oppgave5" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Oppgave5" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -50,5 +72,16 @@
       <updated>1645622988051</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
