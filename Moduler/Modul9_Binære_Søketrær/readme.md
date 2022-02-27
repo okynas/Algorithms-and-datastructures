@@ -14,8 +14,8 @@
   - [x] a
   - [x] b
   - [x] c
-- [ ] Oppgave 4
-- [ ] Oppgave 5
+- [x] Oppgave 4
+- [x] Oppgave 5
 
 ## Oppgave 1
 Denne oppgaven baserer seg på følgende binære søketre (ikke AVL) der verdien i hver node er en enkel bokstav:
