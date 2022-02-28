@@ -140,6 +140,38 @@ public class Tree implements TreeADT<Integer> {
         return new TreeNode(rot.data, CopyTree(rot.left), CopyTree(rot.right));
     }
 
+    //
+    // Remove node with given value from binary search tree.
+    //
+    // Accepts attempts to remove from an empty tree or removal of
+    // non-existing values.
+    //
+    // Uses the method "replacement" to do the removal and
+    // restructuring of the tree, after the node to be removed has
+    // been located.
+    //
+    @Override
+    public void remove(Integer value) {
+
+    }
+
+    //
+    // Handles the three different cases of removal of a treenode
+    // t from a binary tree:
+    //
+    // 1. t is a leaf
+    // 2. t has only one non-empty subtree
+    // 3. t has two non-empty subtreest
+    //
+    // Returns the node (or null) that replaces the deleted node
+    // in the tree.
+    //
+
+    @Override
+    public TreeNode replacement(TreeNode t) {
+        return null;
+    }
+
     @Override
     public int antallMedToBarn(TreeNode rot) {
         if (rot == null) {
