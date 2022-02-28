@@ -4,6 +4,7 @@ import Queue.QueueInt;
 import RadixSort.RadixSortInt;
 import Search.Search;
 import Stack.*;
+import Tree.Tree;
 
 import java.util.Random;
 
@@ -65,37 +66,16 @@ public class Main {
 
         int[] array = {1,2,3,4,5,6,7,8,9,10,11,12,15,19,20,25,29,31,38,44,48,55,59,61,66,72,78,90,99,104};
 
-        boolean s = Search.interpolationSearch(array, 44);
-        System.out.println(s);
-    }
+        /*boolean s = Search.interpolationSearch(array, 44);
+        System.out.println(s);*/
 
-    public static void radix(String[] args) {
-        int m = Integer.parseInt(args[0]);
-        int n = Integer.parseInt(args[1]);
+        Tree BinaryTree = new Tree(null);
 
-        int ti_i_m = (int) java.lang.Math.pow(10, m);
-        int a[] = new int[n];
-        Random R = new Random();
-
-        // fyller array med tilfeldige verdier:
-        for (int i = 0; i < n; i++) {
-            a[i] = R.nextInt(ti_i_m);
+        for(int i = 0; i < array.length; i++) {
+            BinaryTree.Insert(array[i]);
         }
 
-        // sortere
-        RadixSortInt rs = new RadixSortInt();
-        rs.sort(a, m);
-
-        // skriver ut sortert array formatert i kolonner
-        int linjeBredde = 80;
-        int tall_pr_linje = linjeBredde/(m+1);
-        for (int i = 0; i < n; i++) {
-            String format = "%" + m + "d ";
-            System.out.printf(format, a[i]);
-            if ( ((i+1) % tall_pr_linje == 0) || (i == n - 1) ) {
-                System.out.println();
-            }
-
-        }
     }
+
+
 }
