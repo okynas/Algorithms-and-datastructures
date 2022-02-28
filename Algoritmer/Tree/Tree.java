@@ -6,6 +6,7 @@ public class Tree implements TreeADT<Integer> {
     TreeNode venstre = null;
     TreeNode hoyre  = null;
 
+
     public Tree(TreeNode rot) {
         this.rot = rot;
     }
@@ -166,7 +167,6 @@ public class Tree implements TreeADT<Integer> {
     // Returns the node (or null) that replaces the deleted node
     // in the tree.
     //
-
     @Override
     public TreeNode replacement(TreeNode t) {
         return null;
