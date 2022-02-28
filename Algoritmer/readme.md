@@ -12,6 +12,7 @@ En algoritme er i matematikk og informatikk en presis beskrivelse av en endelig 
 - reccursion
 - search
 - sort
+- trees
 
 ## Bilder:
 
