@@ -7,6 +7,9 @@
   - [x] Oppgave c
   - [x] Oppgave d
 - [ ] Oppgave 2
+  - [ ] Oppgave a
+  - [ ] Oppgave b
+  - [ ] Oppgave c
 ## Oppgave 1
 
 1. Et B-tre av orden 3 kalles et "2-3 tre". Hver node kan her ha enten 1 eller 2 verdier og maksimalt 3 barn. Tegn en figur som viser hvordan et B-tre av orden 3, som initielt er tomt, ser ut etter at disse verdiene er satt inn i treet i rekkefølge:
@@ -23,4 +26,4 @@
 
 ## Oppgave 2
 
-Oppgave 3 fra eksamen i 'Algoritmer og Datastrukturer' fra 2013 (Lenker til en ekstern side.).
+Oppgave 3 fra eksamen i [Algoritmer og Datastrukturer](https://it.hiof.no/algdat/oppgaver/algdat_eksamen_16-05-2013.pdf) fra 2013
