@@ -65,6 +65,64 @@ public class treNode {
         }
 
         return finnes(rot.midt, x);
-        
+    }
+
+    /**
+     * Skriv en metode som sjekker om et flerveis søketre av orden 3 også er et B-tre:
+     *
+     * Metoden skal returnere true hvis hele treet med rot i parameteren rot tilfredsstiller
+     * kravet som stilles til et B-tre om at:
+     *
+     * 1. Alle bladnodene i et B-tre skal ligge på samme nivå.
+     * 2. I alle indre noder i B-treet skal antall barn være nøyaktig én mer enn antall verdier.
+     *
+     * Metoden erBtre skal være rekursiv. Variabelen hoyde som ligger i hver node, kan
+     * brukes i besvarelsen av denne deloppgaven.
+     *
+     * @param rot, roten som skal sjekkes om den er B-Tre.
+     * @return bolsk verdi, utifra om den er B-Tre eller ikke.
+     */
+    public boolean erBtre(treNode rot) {
+
+        if (rot == null) {
+            return true;
+        }
+
+        // 1. Alle bladnodene i treet ligger på samme nivå
+        if (rot.antallVerdier == 1 && rot.venstre == null && rot.midt == null) {
+            rot.hoyde = 0;
+            return true;
+        }
+
+        if (rot.antallVerdier == 2 && rot.venstre == null && rot.midt == null && rot.hoyre == null) {
+            rot.hoyde = 0;
+            return true;
+        }
+
+        // ikke et bladnode, men mangler ett av barna?
+        if (rot.antallVerdier == 1 && (rot.venstre == null || rot.midt == null)) {
+            return false;
+        }
+
+        if (rot.antallVerdier == 2 && (rot.venstre == null || rot.midt == null || rot.hoyre == null )) {
+            return false;
+        }
+
+        // 2. i alle indre noder i B-Treet skal antall barn være nøyaktig 1 mer enn antall verdier
+        if (!erBtre(rot.venstre) || !erBtre(rot.midt) || !erBtre(rot.hoyre)) {
+            return false;
+        }
+
+        // alle suntrær er B-Trær. Sjekk om treet i denne roten er et B-Tre.
+        if (rot.antallVerdier == 1 && rot.venstre == rot.midt) {
+            rot.hoyde = rot.venstre.hoyde + 1;
+            return true;
+        }
+
+        if (rot.antallVerdier == 2 && rot.venstre.hoyde == rot.midt.hoyde && rot.midt.hoyde == rot.hoyre.hoyde) {
+            rot.hoyde = rot.venstre.hoyde + 1;
+            return true;
+        }
+        return false;
     }
 }
