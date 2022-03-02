@@ -11,3 +11,7 @@ Oppgave 3 fra eksamen i [Algoritmer og Datastrukturer](https://it.hiof.no/algdat
 ### Oppgave a)
 
 ![img_3.png](img_3.png)
+
+### Oppgave b)
+
+![img_4.png](img_4.png)

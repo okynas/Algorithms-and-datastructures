@@ -31,4 +31,40 @@ public class treNode {
         }
 
     }
+
+    /**
+     * Skriv en metode for å søke i et flerveis søketre av orden 3
+     *
+     * Metoden skal returnere true hvis verdien x finnes i søketreet med rot i parameteren
+     * rot, og false ellers. Metoden kan enten være rekursiv eller iterativ, og skal helst
+     * være så effektiv som mulig.
+     *
+     * @param rot roten i noden, hvor det skal sjekkes fra
+     * @param x, verdien som skal søkes eller letes etter
+     * @return boolean verdi utifra om funnet eller ikke.
+     */
+    public boolean finnes(treNode rot, int x) {
+        if (rot == null) {
+            return false;
+        }
+
+        if (x < rot.v1) {
+            return finnes(rot.venstre, x);
+        }
+
+        if (rot.v1 == x) {
+            return true;
+        }
+
+        if (rot.antallVerdier == 2) {
+            if (x > rot.v2) {
+                return finnes(rot.hoyre, x);
+            } else if (x == rot.v2) {
+                return true;
+            }
+        }
+
+        return finnes(rot.midt, x);
+        
+    }
 }
