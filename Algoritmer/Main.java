@@ -1,3 +1,4 @@
+import BTree.BTree;
 import List.OrderedList;
 import List.UnorderedList;
 import Queue.QueueInt;
@@ -64,15 +65,33 @@ public class Main {
 
         System.out.println(ol.contains(2));*/
 
-        int[] array = {1,2,3,4,5,6,7,8,9,10,11,12,15,19,20,25,29,31,38,44,48,55,59,61,66,72,78,90,99,104};
+        //int[] array = {1,2,3,4,5,6,7,8,9,10,11,12,15,19,20,25,29,31,38,44,48,55,59,61,66,72,78,90,99,104};
 
         /*boolean s = Search.interpolationSearch(array, 44);
         System.out.println(s);*/
 
-        Tree BinaryTree = new Tree(null);
+        /* Tree BinaryTree = new Tree(null);
 
         for(int i = 0; i < array.length; i++) {
             BinaryTree.Insert(array[i]);
+        }*/
+
+        BTree B = new BTree(3);
+
+        B.insert(8);
+        B.insert(9);
+        B.insert(10);
+        B.insert(11);
+        B.insert(15);
+        B.insert(20);
+        B.insert(17);
+
+        B.Traverse();
+
+        if(B.Contains(12)) {
+            System.out.println("\n FOUND 12");
+        } else {
+            System.out.println("\n Not found!!");
         }
 
     }
