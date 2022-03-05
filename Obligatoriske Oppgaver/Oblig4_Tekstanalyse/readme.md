@@ -3,12 +3,15 @@
 #### Sub-TASKS:
 - [ ] Lese en tekst fra bruker eller fil
   - [ ] Splitte opp tekst-input i ord.
-  - [ ] Ett ord inneholder kun bokstaver, slutt vewd spesialtegn som ikke er en bokstav.
+  - [ ] Ett ord inneholder kun bokstaver, slutt ved spesialtegn som ikke er en bokstav.
+  - [ ] Gjør om alle bokstavene til store bokstaver => blir ikke forskjell på start eller slutt av setnign
 - [ ] Registrere alle ordene som forekommer i teksten i binært søketre 
   - [ ] Lage binært søketre
-  - [ ] 
-- [ ] 1
-- [ ] 1
+    - [ ] Lage metodene til binært søketre
+    - [ ] Initielt tomt binært søketre
+    - [ ] Hvis duplikat, skal en teller i noden økes med 1
+  - [ ] Skrive ut ordene i alfabetisk rekkefølge (InOrder)
+  - [ ] Skrive ut antall forekomster av ordene
 
 Denne oppgaven går ut på å lese en tekst og registrere alle ordene som forekommer i teksten i et binært søketre.
 
