@@ -1,5 +1,15 @@
 ## Obligatorisk oppgave 4: Tekstanalyse
 
+#### Sub-TASKS:
+- [ ] Lese en tekst fra bruker eller fil
+  - [ ] Splitte opp tekst-input i ord.
+  - [ ] Ett ord inneholder kun bokstaver, slutt vewd spesialtegn som ikke er en bokstav.
+- [ ] Registrere alle ordene som forekommer i teksten i binært søketre 
+  - [ ] Lage binært søketre
+  - [ ] 
+- [ ] 1
+- [ ] 1
+
 Denne oppgaven går ut på å lese en tekst og registrere alle ordene som forekommer i teksten i et binært søketre.
 
 Skriv et program som leser tekst fra en fil (eller fra standard input) og [deler teksten opp i forskjellige ord](https://it.hiof.no/algdat/oblig/words.java) . Et ord regnes å bestå bare av bokstaver, og et ord er slutt når det kommer et tegn som ikke er en bokstav. Gjør om alle bokstavene i hvert ord til en stor bokstav, slik at det ikke blir forskjell på ord som kommer i begynnelsen av en setning og ord som kommer inne i en setning.
