@@ -7,6 +7,8 @@
   - [x] Oppgave c
   - [x] Oppgave d
 - [x] Oppgave 2
+- [x] Oppgave 3
+- [x] Oppgave 4
   - [x] Oppgave a
   - [x] Oppgave b
   - [x] Oppgave c - VANSKELIG!
@@ -25,5 +27,16 @@
 4. Tegn det tilsvarende B+-treet for de to trærne fra oppgave b og c.
 
 ## Oppgave 2
+
+Et binært søketre kan betraktes som et n-ært søketre av orden 2, der hver node har maksimalt 2 barn og inneholder bare 1 nøkkelverdi. Hvorfor finnes det ikke B-trær med orden lik 2? Eller sagt på en annen måte: Hvorfor kan ikke et binært søketre også være et B-tre?
+
+## Oppgave 3
+
+På forelesning gikk vi gjennom følgende tabell som viser det minimale og maksimale antall noder og nøkkelverdier på hvert nivå i treet, for de fire øverste nivåene i et B-tre med orden lik 201:
+
+![img_1.png](img_1.png)
+
+
+## Oppgave 4
 
 Oppgave 3 fra eksamen i [Algoritmer og Datastrukturer](https://it.hiof.no/algdat/oppgaver/algdat_eksamen_16-05-2013.pdf) fra 2013

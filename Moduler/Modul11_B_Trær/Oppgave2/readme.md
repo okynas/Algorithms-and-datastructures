@@ -1,17 +1,6 @@
 ## Oppgave 2
 
-Oppgave 3 fra eksamen i [Algoritmer og Datastrukturer](https://it.hiof.no/algdat/oppgaver/algdat_eksamen_16-05-2013.pdf) fra 2013
-
 ![img.png](img.png)
 
-![img_1.png](img_1.png)
-
-![img_2.png](img_2.png)
-
-### Oppgave a)
-
-![img_3.png](img_3.png)
-
-### Oppgave b)
-
-![img_4.png](img_4.png)
+Oppfyller alle krav uten om siste, vet ikke alltid om det er fullstendig fullt,
+det er derfor ikke et binært tre.
