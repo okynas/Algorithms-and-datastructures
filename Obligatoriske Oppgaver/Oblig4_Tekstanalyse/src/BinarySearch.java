@@ -1,6 +1,6 @@
 public class BinarySearch implements BinarySearchADT<String>{
 
-    public static Node root;
+    public Node root;
 
     public BinarySearch() {
         root = null;
@@ -9,6 +9,11 @@ public class BinarySearch implements BinarySearchADT<String>{
     @Override
     public boolean isEmpty() {
         return (root == null);
+    }
+
+    @Override
+    public boolean isEmpty(Node rot) {
+        return (rot == null);
     }
 
     @Override
@@ -90,7 +95,7 @@ public class BinarySearch implements BinarySearchADT<String>{
      */
     @Override
     public void inorder(Node gjeldendeNode) {
-        if (!isEmpty()) {
+        if (!isEmpty(gjeldendeNode)) {
             inorder(gjeldendeNode.left);
             gjeldendeNode.printOutNode();
             inorder(gjeldendeNode.right);
