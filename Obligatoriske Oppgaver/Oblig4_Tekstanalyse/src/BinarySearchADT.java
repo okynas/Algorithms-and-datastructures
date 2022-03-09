@@ -1,5 +1,6 @@
 public interface BinarySearchADT<T> {
     boolean isEmpty();
+    boolean isEmpty(Node rot);
     boolean search(T element);
     void insert(T element);
     void remove(T element);

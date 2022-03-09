@@ -14,7 +14,7 @@ public class Node {
     }
 
     public void printOutNode() {
-        System.out.print(data + " ");
+        System.out.print("(" + data + ": " + count + "), ");
     }
 
     /*public int comparing(Node node) {
