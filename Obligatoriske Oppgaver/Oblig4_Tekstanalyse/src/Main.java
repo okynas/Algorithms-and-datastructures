@@ -9,15 +9,12 @@ public class Main {
      * Got this function from task-description.
      */
     public static void readFromUserInput() {
-        BufferedReader r =
-                new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
         StreamTokenizer input = new StreamTokenizer(r);
 
-        try
-        {
+        try {
             int x = input.nextToken();
-            while (x != StreamTokenizer.TT_EOF)
-            {
+            while (x != StreamTokenizer.TT_EOF) {
                 if (input.ttype == StreamTokenizer.TT_WORD)
                     System.out.println(input.sval);
                 x = input.nextToken ();
@@ -27,7 +24,14 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        readFromUserInput();
+        //readFromUserInput();
+        BinarySearch sokeTre = new BinarySearch();
+        sokeTre.insert("Stian");
+        sokeTre.insert("Martinsen");
+        sokeTre.insert("Stian");
+
+        sokeTre.inorder(sokeTre.root);
+
     }
 
 }
