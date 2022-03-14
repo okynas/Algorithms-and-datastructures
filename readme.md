@@ -24,7 +24,7 @@
 - [x] Binær søketrær
   - [x] Selvbalanserende søketrær
 - [ ] Svadagenerator
-- [ ] B-trær
+- [x] B-trær
 - [ ] Heap og prioriteringskø
 - [ ] Heapsort
 - [ ] Hashing
