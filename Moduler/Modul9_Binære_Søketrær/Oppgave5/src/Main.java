@@ -1,5 +1,6 @@
 public class Main {
     public static void TreeSort(int[] A) {
+        // Arbeidsmengde O(n log(n)) hvis sortert
         int n = A.length;
         BinaryTreeSearch T = new BinaryTreeSearch();
         // overfør hele array til søketre

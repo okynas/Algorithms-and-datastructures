@@ -1,3 +1,18 @@
+/**
+ * .------.         _____ _                       _
+ * |S.--. |        / ____| |                     | |
+ * | :/\: |       | (___ | | ___ __ _____   _____| |_    __ ___   __
+ * | :\/: |        \___ \| |/ / '__/ _ \ \ / / _ \ __|  / _` \ \ / /
+ * | '--'M|        ____) |   <| | |  __/\ V /  __/ |_  | (_| |\ V /
+ * `------'       |_____/|_|\_\_|  \___| \_/ \___|\__|  \__,_| \_/  _
+ *                 / ____| | (_)             |  \/  |          | | (_)
+ *                | (___ | |_ _  __ _ _ __   | \  / | __ _ _ __| |_ _ _ __  ___  ___ _ __
+ *                 \___ \| __| |/ _` | '_ \  | |\/| |/ _` | '__| __| | '_ \/ __|/ _ \ '_ \
+ *                 ____) | |_| | (_| | | | | | |  | | (_| | |  | |_| | | | \__ \  __/ | | |
+ *                |_____/ \__|_|\__,_|_| |_| |_|  |_|\__,_|_|   \__|_|_| |_|___/\___|_| |_|
+ *
+ */
+
 package Sorting;
 
 import java.sql.SQLOutput;
@@ -5,8 +20,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
-    private static final int MAX_SEQ = 100000;
-    private static final int MAX_N = 100000000;
+    private static final int MAX_SEQ = 100_000;
+    private static final int MAX_N = 100_000_000;
 
     public static void randomize(int[] A) {
         Random r = new Random();
@@ -54,102 +69,78 @@ public class Main {
             System.exit(1);
         }
 
-        // Utføre sortering
-        if (programToRun == 1) {
+        if (algorithm == 1) {
+            randomize(numberToBeSorted);
+            time = System.currentTimeMillis();
+            QuickSort.Sort(numberToBeSorted, 0, n-1);
+            time = System.currentTimeMillis() - time;
 
-            if (algorithm == 1) {
-                randomize(numberToBeSorted);
-                time = System.currentTimeMillis();
-                QuickSort.Sort(numberToBeSorted, 0, 2*n);
-                time = System.currentTimeMillis() - time;
+            if (programToRun == 1) {
                 System.out.printf("Quick Sort\t: %6.3f s\n", time /1000.0);
-            } else if (algorithm == 2) {
-                randomize(numberToBeSorted);
-                time = System.currentTimeMillis();
-                MergeSort.sort(numberToBeSorted, 0, n-1);
-                time = System.currentTimeMillis() - time;
-                System.out.printf("Merge Sort\t: %6.3f s\n", time /1000.0);
-            } else if (algorithm == 3) {
-                int maxDigit = (int) Math.log10(n);
-                randomize(numberToBeSorted);
-                time = System.currentTimeMillis();
-                RadixSortInt.sort(numberToBeSorted, maxDigit);
-                time = System.currentTimeMillis() - time;
-                System.out.printf("Radix Sort\t: %6.3f s\n", time /1000.0);
+            } else if (programToRun == 2) {
+                System.out.printf("Quick Sort\t: %6.9f \n c=t/n log(n): ", time /(n * Math.log(n)));
             } else {
-                // alrogithm = 4
-                if (n <= MAX_SEQ) {
-                    randomize(numberToBeSorted);
-                    time = System.currentTimeMillis();
-                    InsertionSort.Sort(numberToBeSorted);
-                    time = System.currentTimeMillis() - time;
+                System.out.println("Wrong program");
+            }
+
+
+        } else if (algorithm == 2) {
+            randomize(numberToBeSorted);
+            time = System.currentTimeMillis();
+            MergeSort.sort(numberToBeSorted, 0, n-1);
+            time = System.currentTimeMillis() - time;
+
+            if (programToRun == 1) {
+                System.out.printf("Merge Sort\t: %6.3f s\n", time /1000.0);
+            } else if (programToRun == 2) {
+                System.out.printf("Merge Sort\t: %6.9f \n c=t/n log(n): ", time /(n * Math.log(n)));
+            } else {
+                System.out.println("Wrong program");
+            }
+
+
+        } else if (algorithm == 3) {
+            int maxDigit = (int) Math.log10(n);
+            randomize(numberToBeSorted);
+            time = System.currentTimeMillis();
+            RadixSortInt.sort(numberToBeSorted, maxDigit);
+            time = System.currentTimeMillis() - time;
+
+            if (programToRun == 1) {
+                System.out.printf("Radix Sort\t: %6.3f s\n", time /1000.0);
+            } else if (programToRun == 2) {
+                System.out.printf("Radix Sort\t: %6.9f \n c=t/n", ( (float)time / n) );
+            } else {
+                System.out.println("Wrong program");
+            }
+
+
+        } else {
+            // alrogithm = 4
+            if (n <= MAX_SEQ) {
+                randomize(numberToBeSorted);
+                time = System.currentTimeMillis();
+                InsertionSort.Sort(numberToBeSorted);
+                time = System.currentTimeMillis() - time;
+
+                if (programToRun == 1) {
                     System.out.printf("Insertion Sort\t: %6.3f s\n", time /1000.0);
+                } else if (programToRun == 2) {
+                    System.out.printf("Insertion Sort\t: %6.9f \n c=t/n^2",  ( (float)time / (n*n) ) );
                 } else {
-                    System.out.println("Number of elements to be sorted is too, big\n The work is O(n^2)");
-                    System.exit(1);
+                    System.out.println("Wrong program");
                 }
-
-            }
-
-        }
-        // Estimere konstant c
-        else {
-            if (algorithm == 1) {
-                // C = T/(nlog(n)).
-                randomize(numberToBeSorted);
-                time = System.currentTimeMillis();
-                QuickSort.Sort(numberToBeSorted, 0, 2*n);
-                time = System.currentTimeMillis() - time;
-
-                System.out.printf("Quick Sort\t: %6.3f \n c=t/n log(n): ", time /(n * Math.log10(n)));
-
-            } else if (algorithm == 2) {
-                randomize(numberToBeSorted);
-                time = System.currentTimeMillis();
-                MergeSort.sort(numberToBeSorted, 0, n-1);
-                time = System.currentTimeMillis() - time;
-
-                System.out.printf("Merge Sort\t: %6.3f \n c=t/n log(n): ", time /(n * Math.log10(n)));
-
-            } else if (algorithm == 3) {
-                        int maxDigit = (int) Math.log10(n);
-                        randomize(numberToBeSorted);
-                        time = System.currentTimeMillis();
-                        RadixSortInt.sort(numberToBeSorted, maxDigit);
-                        time = System.currentTimeMillis() - time;
-
-                        System.out.printf("Radix Sort\t: %6.3f \n c=t/n", (double) (time / n) );
-
-                    } else {
-                        if (n <= MAX_SEQ) {
-                            randomize(numberToBeSorted);
-                            time = System.currentTimeMillis();
-                    InsertionSort.Sort(numberToBeSorted);
-                    time = System.currentTimeMillis() - time;
-
-                    // System.out.printf("Insertion Sort\t: %6.3f s\n", time /1000.0);
-                    System.out.printf("Insertion Sort\t: %6.3f \n c=t/n^2", (double) (time / (long) n*n ) );
-
-                } else {
-                    System.out.println("Number of elements to be sorted is too, big\n The work is O(n^2)");
-                    System.exit(1);
-                }
-
+            } else {
+                System.out.println("Number of elements to be sorted is too, big\n The work is O(n^2)");
+                System.exit(1);
             }
         }
-
     }
 
     public static void main(String[] args) {
         do {
             startTest();
         } while(query("\n Test again?"));
-    }
-
-    public static void printList(int[] list) {
-        for (Integer i : list) {
-            System.out.print(i + " ");
-        }
     }
 
     static boolean query(String str) {

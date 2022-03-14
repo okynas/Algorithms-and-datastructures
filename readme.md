@@ -21,10 +21,10 @@
   - [x] Shell sort
   - [x] Logaritmiske sorteringsalgoritmer
 - [x] Binær trær
-- [ ] Binær søketrær
-  - [ ] Selvbalanserende søketrær
+- [x] Binær søketrær
+  - [x] Selvbalanserende søketrær
 - [ ] Svadagenerator
-- [ ] B-trær
+- [x] B-trær
 - [ ] Heap og prioriteringskø
 - [ ] Heapsort
 - [ ] Hashing
