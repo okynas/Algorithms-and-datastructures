@@ -41,8 +41,8 @@ Metoden skal bytte om på verdiene i treet slik at hele treet blir heap-ordnet. 
 Metoden har som parameter en referanse til roten i et tre der nodene har helt vilkårlige verdier, uten noen innbyrdes ordning. Metoden skal bytte rundt på disse verdiene slik at treet blir et heap-ordnet tre med de samme verdiene. Den skal være rekursiv og skal benytte metoden reparer fra oppgave a).
 
 3. Hvilken orden (angitt med O-notasjon) har tidsforbruket til metoden lag_heap_ordning fra forrige oppgave dersom treet inneholder n noder og
-Treet er komplett, d.v.s. at alle nivåer, muligens bortsett fra det dypeste nivået, er helt fylt opp med noder?
-Hver node (bortsett fra én) har nøyaktig ett subtre (som ikke er tomt), og den siste noden har ingen ikke-tomme subtrær?
+   Treet er komplett, d.v.s. at alle nivåer, muligens bortsett fra det dypeste nivået, er helt fylt opp med noder?
+   Hver node (bortsett fra én) har nøyaktig ett subtre (som ikke er tomt), og den siste noden har ingen ikke-tomme subtrær?
 
 4. Skriv en metode:
 
