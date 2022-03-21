@@ -18,6 +18,6 @@ En oversikt over alle modulene innenfor faget **Algoritmer og datastrukturer**
   - [x] Selvbalanserende søketrær
 - [ ] Svadagenerator
 - [x] B-trær
-- [ ] Heap og prioriteringskø
+- [x] Heap og prioriteringskø
 - [ ] Hashing
 - [ ] Grafer (Traversering, nåbarher, kortestevei)
