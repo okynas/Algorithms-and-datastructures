@@ -64,19 +64,21 @@ public class HashLinaer
         // LineÃ¦r probing
         int neste = h;
         
-        String temp = hashTabell[neste];
-        hashTabell[h] = S;
-
+        String temp = S, temp2;
 
         while (hashTabell[neste] != null) {
             // Ny probe
             antProbes++;
 
+            /**
+             * SWAPPING the values, to implement:
+             * LAST COME, FIRST SERVE.
+             */
+            temp2 = hashTabell[neste];
             hashTabell[neste] = temp;
+            temp = temp2;
 
-            // Denne indeksen er opptatt, prÃ¸ver neste
             neste++;
-            temp = hashTabell[neste];
 
             // Wrap-around
             if (neste >= hashLengde) {
@@ -92,10 +94,10 @@ public class HashLinaer
             }
         }
 
-        // Lagrer tekststrengen pÃ¥ funnet indeks
+        // Lagrer tekststrengen pÃ funnet indeks
         hashTabell[neste] = temp;
 
-        // Ã˜ker antall elementer som er lagret
+        // Øker antall elementer som er lagret
         n++;
     }
 
