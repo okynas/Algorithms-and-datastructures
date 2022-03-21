@@ -9,8 +9,7 @@ import java.util.Scanner;
 // - Ingen rehashing ved full tabell
 // - Tilbyr bare innsetting og sÃ¸king
 //
-public class HashLinear
-{
+public class HashLinear {
     // Hashlengde
     private int hashLengde;
 
@@ -26,8 +25,7 @@ public class HashLinear
     // KonstruktÃ¸r
     // Sjekker ikke for fornuftig verdi av hashlengden
     //
-    public HashLinear(int lengde)
-    {
+    public HashLinear(int lengde) {
         hashLengde = lengde;
         hashTabell = new String[lengde];
         n = 0;
@@ -35,26 +33,22 @@ public class HashLinear
     }
 
     // Returnerer load factor
-    public float loadFactor()
-    {
+    public float loadFactor() {
         return ((float) n)/hashLengde;
     }
 
     // Returnerer antall data i tabellen
-    public int antData()
-    {
+    public int antData() {
         return n;
     }
 
     // Returnerer antall probes ved innsetting
-    public int antProbes()
-    {
+    public int antProbes() {
         return antProbes;
     }
 
     // Hashfunksjon
-    int hash(String S)
-    {
+    int hash(String S) {
         int h = Math.abs(S.hashCode());
         return h % hashLengde;
     }
@@ -62,7 +56,7 @@ public class HashLinear
     // Innsetting av tekststreng med lineÃ¦r probing
     // Avbryter med feilmelding hvis ledig plass ikke finnes
     //
-    void insert(String S) {
+    void insert(String S)  {
         // Beregner hashverdien
         int h = hash(S);
         int hashT;
@@ -134,16 +128,14 @@ public class HashLinear
     // SÃ¸king etter tekststreng med lineÃ¦r probing
     // Returnerer true hvis strengen er lagret, false ellers
     //
-    boolean search(String S)
-    {
+    boolean search(String S) {
         // Beregner hashverdien
         int h = hash(S);
 
         // LineÃ¦r probing
         int neste = h;
 
-        while (hashTabell[neste] != null)
-        {
+        while (hashTabell[neste] != null) {
             // Har vi funnet tekststrengen?
             if (hashTabell[neste].compareTo(S) == 0)
                 return true;
@@ -176,21 +168,18 @@ public class HashLinear
     //
     // * Tester om sÃ¸k fungerer for et par konstante verdier
     //
-    public static void main(String argv[])
-    {
+    public static void main(String argv[]) {
         // Hashlengde leses fra kommandolinjen
         int hashLengde = 0;
         Scanner input = new Scanner(System.in);
-        try
-        {
+        try {
             if (argv.length != 1)
                 throw new IOException("Feil: Hashlengde mÃ¥ angis");
             hashLengde = Integer.parseInt(argv[0]);
             if (hashLengde < 1 )
                 throw new IOException("Feil: Hashlengde mÃ¥ vÃ¦re stÃ¸rre enn 0");
         }
-        catch (Exception e)
-        {
+        catch (Exception e) {
             System.err.println(e);
             System.exit(1);
         }
@@ -217,9 +206,9 @@ public class HashLinear
         if (hL.search(S))
             System.out.println("\"" + S + "\"" + " finnes i hashtabellen");
         S = "Il Tempo Gigante";
-        if (!hL.search(S))
+        if (!hL.search(S)) {
             System.out.println("\"" + S + "\"" + " finnes ikke i hashtabellen");
-
+        }
     }
 }
 
