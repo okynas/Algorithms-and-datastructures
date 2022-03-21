@@ -25,8 +25,8 @@
   - [x] Selvbalanserende søketrær
 - [ ] Svadagenerator
 - [x] B-trær
-- [ ] Heap og prioriteringskø
-- [ ] Heapsort
+- [x] Heap og prioriteringskø
+- [x] Heapsort
 - [ ] Hashing
 - [ ] Grafer (Traversering, nåbarher, kortestevei)
 
