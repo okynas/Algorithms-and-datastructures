@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Oblig5_Hashing.iml" filepath="$PROJECT_DIR$/Oblig5_Hashing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Oppgave1/Oppgave1.iml" filepath="$PROJECT_DIR$/Oppgave1/Oppgave1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Oppgave2/Oppgave2.iml" filepath="$PROJECT_DIR$/Oppgave2/Oppgave2.iml" />
     </modules>
   </component>
 </project>
