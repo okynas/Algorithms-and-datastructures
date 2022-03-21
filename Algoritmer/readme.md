@@ -13,6 +13,7 @@ En algoritme er i matematikk og informatikk en presis beskrivelse av en endelig 
 - search
 - sort
 - trees
+- B-Tree
 
 ## Bilder:
 
