@@ -33,11 +33,12 @@ public class Main {
         HashLinaer hL = new HashLinaer(hashLengde);
 
         // Leser input og hasher alle linjer
-        //while (input.hasNext()) {
+        /*while (input.hasNext()) {
+            hL.insert(input.nextLine());
+        }*/
         hL.insert("VW GOLF");
         hL.insert("VW POLO");
         hL.insert("VW TIGUAN");
-        //}
 
         // Skriver ut hashlengde, antall data lest, antall kollisjoner
         // og load factor
