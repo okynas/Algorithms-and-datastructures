@@ -32,13 +32,28 @@ public class Main {
         // Lager ny hashTabell
         HashLinaer hL = new HashLinaer(hashLengde);
 
+
+        /**
+         * ENDRE DENNE HVIS DU SKAL KJØRE PÅ LINUX / MAC.
+         *
+         * vvvvvv
+         */
         // Leser input og hasher alle linjer
         /*while (input.hasNext()) {
             hL.insert(input.nextLine());
         }*/
+
         hL.insert("VW GOLF");
         hL.insert("VW POLO");
         hL.insert("VW TIGUAN");
+        /**
+         * ^^^^
+         * ENDRE DENNE
+         */
+
+        hL.print();
+
+        System.out.println("\n");
 
         // Skriver ut hashlengde, antall data lest, antall kollisjoner
         // og load factor

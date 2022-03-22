@@ -134,4 +134,10 @@ public class HashLinaer
         // Finner ikke strengen, har kommet til en probe som er null
         return false;
     }
+
+    public void print() {
+        for (String item : hashTabell) {
+            System.out.println(item);
+        }
+    }
 }
