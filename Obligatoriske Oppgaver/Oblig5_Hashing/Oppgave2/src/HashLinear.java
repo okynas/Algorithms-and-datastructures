@@ -187,12 +187,23 @@ public class HashLinear {
         // Lager ny hashTabell
         HashLinear hL = new HashLinear(hashLengde);
 
+        /**
+         * ENDRE DENNE HVIS DU SKAL KJØRE PÅ LINUX / MAC.
+         *
+         * vvvvvv
+         */
         // Leser input og hasher alle linjer
-        //while (input.hasNext()) {
+        /*while (input.hasNext()) {
+            hL.insert(input.nextLine());
+        }*/
+
         hL.insert("VW GOLF");
         hL.insert("VW POLO");
         hL.insert("VW TIGUAN");
-        // }
+        /**
+         * ^^^^
+         * ENDRE DENNE
+         */
 
         // Skriver ut hashlengde, antall data lest, antall kollisjoner
         // og load factor

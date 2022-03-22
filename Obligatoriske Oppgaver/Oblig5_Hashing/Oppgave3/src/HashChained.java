@@ -173,10 +173,23 @@ public class HashChained {
         // Lager ny hashTabell
         HashChained hC = new HashChained(hashLengde);
 
+        /**
+         * ENDRE DENNE HVIS DU SKAL KJØRE PÅ LINUX / MAC.
+         *
+         * vvvvvv
+         */
         // Leser input og hasher alle linjer
+        /*while (input.hasNext()) {
+            hC.insert(input.nextLine());
+        }*/
+
         hC.insert("VW GOLF");
         hC.insert("VW POLO");
         hC.insert("VW TIGUAN");
+        /**
+         * ^^^^
+         * ENDRE DENNE
+         */
 
         hC.remove("VW POLO");
 
