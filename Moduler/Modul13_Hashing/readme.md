@@ -47,7 +47,7 @@ Beregn deretter hashverdien ved å finne resten ved heltallsdivisjon av summen a
 Gjenta oppgave b., men med hashlengde lik 11.
 
 ## Oppgave 4
-Fra ny/utsatt eksamen januar 2022: (Lenker til en ekstern side.) Oppgave 5
+Fra ny/utsatt eksamen januar 2022: [Oppgave 5](https://it.hiof.no/algdat/oppgaver/eksamen_07-01-2022/oppgaver.pdf)
 
 ## Oppgave 5
 Oppgaven er hentet fra en tidligere eksamen i alg.dat.

@@ -19,5 +19,5 @@ En oversikt over alle modulene innenfor faget **Algoritmer og datastrukturer**
 - [ ] Svadagenerator
 - [x] B-trær
 - [x] Heap og prioriteringskø
-- [ ] Hashing
+- [x] Hashing
 - [ ] Grafer (Traversering, nåbarher, kortestevei)
