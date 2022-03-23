@@ -56,70 +56,70 @@ public class HashLinear {
     // Innsetting av tekststreng med lineÃ¦r probing
     // Avbryter med feilmelding hvis ledig plass ikke finnes
     //
-    void insert(String S)  {
+    void insert(String valueToInsert)  {
         // Beregner hashverdien
-        int h = hash(S);
-        int hashT;
-        String T;
-        int distanceBtwOriginalPlaceAndS = 0;
-        int distanceBtwOriginalPlaceAndT;
-        int neste = h;
+        int hashIndex = hash(valueToInsert);
+        int hashExistingValue;
+        String existingValue;
+        int distanceBtwOriginalPlaceAndInsertionValue = 0;
+        int distanceBtwOriginalPlaceAndExisting;
+        int nextHashIndex = hashIndex;
 
         /**
          * HVIS en indeks, neste, i hashtabellen er i bruk:
          */
-        while (hashTabell[neste] != null) {
+        while (hashTabell[nextHashIndex] != null) {
             // Ny probe
             antProbes++;
 
             /**
-             * T = dataelementet som allerede ligger på indeksplasseringa.
+             * existingValue = dataelementet som allerede ligger på indeksplasseringa.
              *
-             * hasher T, for å finne indeksen T opprinnelig skal ligge på, og regner avstand mellom gjeldende indeks og
-             * hashen.
+             * hasher existingValue, for å finne indeksen existingValue opprinnelig skal ligge på,
+             * og regner avstand mellom gjeldende indeks og hashen.
              *
-             * S = elementet som skal settes inn.
+             * valueToInsert = elementet som skal settes inn.
              */
-            T = hashTabell[neste];
-            hashT = hash(T);
-            distanceBtwOriginalPlaceAndT = neste - hashT;
+            existingValue = hashTabell[nextHashIndex];
+            hashExistingValue = hash(existingValue);
+            distanceBtwOriginalPlaceAndExisting = nextHashIndex - hashExistingValue;
 
             /**
-             * Velger å flytte dataelementet "ett hakk til høyre" (last come, first serve) hvis S har flyttet
-             * seg lengre vekk fra original hashindeks enn T
+             * Velger å flytte dataelementet "ett hakk til høyre" (last come, first serve) hvis valueToInsert har flyttet
+             * seg lengre vekk fra original hashindeks enn existingValue
              *
-             * Hvis ikke, dataelementet som ligger på posisjon T skal ikke flyttes, setter S inn på neste
+             * Hvis ikke, dataelementet som ligger på posisjon existingValue skal ikke flyttes, setter valueToInsert inn på neste
              * ledige posisjon.
              */
-            if (distanceBtwOriginalPlaceAndT < 0) {
-                distanceBtwOriginalPlaceAndT = neste + (hashLengde - hashT);
+            if (distanceBtwOriginalPlaceAndExisting < 0) {
+                distanceBtwOriginalPlaceAndExisting = nextHashIndex + (hashLengde - hashExistingValue);
             }
 
-            if (distanceBtwOriginalPlaceAndT < distanceBtwOriginalPlaceAndS) {
-                hashTabell[neste] = S;
-                S = T;
-                distanceBtwOriginalPlaceAndS = distanceBtwOriginalPlaceAndT;
+            if (distanceBtwOriginalPlaceAndExisting < distanceBtwOriginalPlaceAndInsertionValue) {
+                hashTabell[nextHashIndex] = valueToInsert;
+                valueToInsert = existingValue;
+                distanceBtwOriginalPlaceAndInsertionValue = distanceBtwOriginalPlaceAndExisting;
             }
 
             // Denne indeksen er opptatt, prÃ¸ver neste
-            neste++;
+            nextHashIndex++;
 
             // Wrap-around
-            if (neste >= hashLengde) {
-                neste = 0;
+            if (nextHashIndex >= hashLengde) {
+                nextHashIndex = 0;
             }
 
             // Hvis vi er kommet tilbake til opprinnelig hashverdi, er
             // tabellen full og vi gir opp (her ville man normalt
             // doblet lengden pÃ¥ hashtabellen og gjort en rehashing)
-            if (neste == h) {
+            if (nextHashIndex == hashIndex) {
                 System.err.println("\n Hashtabell full, avbryter");
                 System.exit(0);
             }
         }
 
         // Lagrer tekststrengen pÃ¥ funnet indeks
-        hashTabell[neste] = S;
+        hashTabell[nextHashIndex] = valueToInsert;
 
         // Ã˜ker antall elementer som er lagret
         n++;

@@ -94,10 +94,10 @@ public class HashChained {
 
     /**
      * Implementering av fjerning av et element (teksstreng) i hashing med kjeding.
-     * @param S, Streng som skal fjernes.
+     * @param insertionValue, Streng som skal fjernes.
      */
-    public boolean remove(String S) {
-        HashNode denne = hashTabell[hash(S)];
+    public boolean remove(String insertionValue) {
+        HashNode denne = hashTabell[hash(insertionValue)];
 
         if (denne != null) {
 
@@ -109,8 +109,8 @@ public class HashChained {
              * verdien i hashtabellen til å være denne sin neste.
              *
              */
-            if (denne.data.compareTo(S) == 0) {
-                hashTabell[hash(S)] = denne.neste;
+            if (denne.data.compareTo(insertionValue) == 0) {
+                hashTabell[hash(insertionValue)] = denne.neste;
                 return true;
             }
 
@@ -126,12 +126,23 @@ public class HashChained {
             while (denne != null) {
                 /**
                  * Sjekker om dennes verdi er det samme som String-inputen.
+                 * Og funnet verdien som skal fjerens.
+                 *
+                 * Hvis funnet, setter vi forrige node sin neste til å være denne sin neste.
+                 * Dette er for å endre peker/referanse mellom forrige til nest.
+                 *
+                 * f.eks. Fjerne verdi 1.
+                 * [0,1,2] -> [0,2]
+                 * Må sette denne (1) sin forrige (0), sin neste-peker til å være denne (1) sin neste (2).
                  */
-                if (denne.data.compareTo(S) == 0) {
+                if (denne.data.compareTo(insertionValue) == 0) {
                     forrige.neste = denne.neste;
                     return true;
                 }
 
+                /**
+                 * Flytter ett hakk fremover i hashtabellen, og sjekker while-loopen en gang til. 
+                 */
                 forrige = denne;
                 denne = denne.neste;
             }
