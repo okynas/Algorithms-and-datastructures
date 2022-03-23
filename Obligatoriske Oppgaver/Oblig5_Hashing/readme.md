@@ -25,4 +25,7 @@ En enkel metode, som ofte gir gode resultater, er oppkalt etter den engelske mid
 
 "Robin Hood"-hashing vil lage kortere søkeveier ved alltid å flytte videre det av de to dataelementene som har beveget seg kortest fra "startpunktet" der vi først prøvde å sette det inn.
 
-Skriv om testprogrammet for [hashing med lineær probing](https://it.hiof.no/algdat/kode/hashLinear.java)
+Skriv om testprogrammet for [hashing med lineær probing](https://it.hiof.no/algdat/kode/hashLinear.java), slik at det i stedet bruker "Robin Hood"-strategien for å løse kollisjoner, Markér tydelig i besvarelsen din hvor du har gjort endringer i koden.
+
+## Oppgave 3: Fjerning av data
+Implementer fjerning av et element (en tekststreng) i [programmet for hashing med kjeding](https://it.hiof.no/algdat/2018/kode/hashChained.java).
