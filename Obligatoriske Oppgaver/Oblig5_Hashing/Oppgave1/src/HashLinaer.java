@@ -57,16 +57,16 @@ public class HashLinaer
     // Innsetting av tekststreng med lineÃ¦r probing
     // Avbryter med feilmelding hvis ledig plass ikke finnes
     //
-    void insert(String S) {
+    void insert(String stringValueToInsert) {
         // Beregner hashverdien
-        int h = hash(S);
+        int hashIndex = hash(stringValueToInsert);
 
         // LineÃ¦r probing
-        int neste = h;
+        int nextHashIndex = hashIndex;
         
-        String temp = S, temp2;
+        String previousStringValueToInsert = stringValueToInsert, tempStringValue;
 
-        while (hashTabell[neste] != null) {
+        while (hashTabell[nextHashIndex] != null) {
             // Ny probe
             antProbes++;
 
@@ -74,28 +74,28 @@ public class HashLinaer
              * SWAPPING the values, to implement:
              * LAST COME, FIRST SERVE.
              */
-            temp2 = hashTabell[neste];
-            hashTabell[neste] = temp;
-            temp = temp2;
+            tempStringValue = hashTabell[nextHashIndex];
+            hashTabell[nextHashIndex] = previousStringValueToInsert;
+            previousStringValueToInsert = tempStringValue;
 
-            neste++;
+            nextHashIndex++;
 
             // Wrap-around
-            if (neste >= hashLengde) {
-                neste = 0;
+            if (nextHashIndex >= hashLengde) {
+                nextHashIndex = 0;
             }
 
             // Hvis vi er kommet tilbake til opprinnelig hashverdi, er
             // tabellen full og vi gir opp (her ville man normalt
             // doblet lengden pÃ¥ hashtabellen og gjort en rehashing)
-            if (neste == h) {
-                System.err.println("\nHashtabell full, avbryter");
+            if (nextHashIndex == hashIndex) {
+                System.err.println("\n Hashtabell full, avbryter");
                 System.exit(0);
             }
         }
 
         // Lagrer tekststrengen pÃ funnet indeks
-        hashTabell[neste] = temp;
+        hashTabell[nextHashIndex] = previousStringValueToInsert;
 
         // Øker antall elementer som er lagret
         n++;

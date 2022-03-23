@@ -38,6 +38,7 @@ public class Main {
          *
          * vvvvvv
          */
+
         // Leser input og hasher alle linjer
         /*while (input.hasNext()) {
             hL.insert(input.nextLine());
