@@ -14,10 +14,10 @@ En oversikt over alle modulene innenfor faget **Algoritmer og datastrukturer**
   - [x] Shell sort
   - [x] Logaritmiske sorteringsalgoritmer
 - [x] Binær trær
-- [ ] Binær søketrær
-  - [ ] Selvbalanserende søketrær
+- [x] Binær søketrær
+  - [x] Selvbalanserende søketrær
 - [ ] Svadagenerator
-- [ ] B-trær
-- [ ] Heap og prioriteringskø
-- [ ] Hashing
+- [x] B-trær
+- [x] Heap og prioriteringskø
+- [x] Hashing
 - [ ] Grafer (Traversering, nåbarher, kortestevei)

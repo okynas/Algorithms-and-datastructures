@@ -17,6 +17,7 @@ En algoritme er i matematikk og informatikk en presis beskrivelse av en endelig 
 - heap
 - hashing
 
+
 ## Bilder:
 
 ![image](https://user-images.githubusercontent.com/36879451/151720795-18c6d95d-2f07-4605-b82b-01b5caa7441d.png)
