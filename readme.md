@@ -27,7 +27,7 @@
 - [x] B-trær
 - [x] Heap og prioriteringskø
 - [x] Heapsort
-- [ ] Hashing
+- [x] Hashing
 - [ ] Grafer (Traversering, nåbarher, kortestevei)
 
 ## Læringsutbytte:

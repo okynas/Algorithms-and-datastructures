@@ -5,17 +5,25 @@
 En algoritme er i matematikk og informatikk en presis beskrivelse av en endelig serie operasjoner som skal utføres for å løse et problem eller flere problemer. Hvis en prosess er algoritmisk, kan den skrives som en serie operasjoner som kan utføres gjennom beregninger.
 
 ## Liste over algoritme:
-- queue
-- list
-- stack
-- radix sort
-- reccursion
-- search
-- sort
-- trees
-- b-tre
-- heap
-- hashing
+- [x] Stack
+- [x] Queue
+- [x] Radix Sort
+- [x] Lister
+- [x] Rekursiv Programmering
+- [ ] Backtracking
+- [x] Søking
+- [x] Sortering
+    - [x] Sekvensiell sorteringsalgoritme
+    - [x] Shell sort
+    - [x] Logaritmiske sorteringsalgoritmer
+- [x] Binær trær
+- [x] Binær søketrær
+    - [x] Selvbalanserende søketrær
+- [ ] Svadagenerator
+- [x] B-trær
+- [x] Heap og prioriteringskø
+- [x] Hashing
+- [ ] Grafer (Traversering, nåbarher, kortestevei)
 
 
 ## Bilder:
