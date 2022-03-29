@@ -99,54 +99,57 @@ public class HashChained {
     public boolean remove(String insertionValue) {
         HashNode denne = hashTabell[hash(insertionValue)];
 
-        if (denne == null) {
-            return false;
-        }
+        if (denne != null) {
+            //return false;
 
-        /**
-         * hvis første element i hashtabellen skal fjernes,
-         * DVS. denne (Node på indeks i hashtabellen, hvor en ny hash med samme string).
-         *
-         * Kan ikke bruke forrige.neste fordi vi fjerner første element, setter derfor kun
-         * verdien i hashtabellen til å være denne sin neste.
-         *
-         */
-        if (denne.data.compareTo(insertionValue) == 0) {
-            hashTabell[hash(insertionValue)] = denne.neste;
-            return true;
-        }
 
-        /**
-         * flytter ett hakk fremover i hashtabellen.
-         */
-        HashNode forrige = denne;
-        denne = denne.neste;
-
-        /**
-         * Så lenge denne (verdien i hashtabellen) ikke er null.
-         */
-        while (denne != null) {
             /**
-             * Sjekker om dennes verdi er det samme som String-inputen.
-             * Og funnet verdien som skal fjerens.
+             * hvis første element i hashtabellen skal fjernes,
+             * DVS. denne (Node på indeks i hashtabellen, hvor en ny hash med samme string).
              *
-             * Hvis funnet, setter vi forrige node sin neste til å være denne sin neste.
-             * Dette er for å endre peker/referanse mellom forrige til nest.
+             * Kan ikke bruke forrige.neste fordi vi fjerner første element, setter derfor kun
+             * verdien i hashtabellen til å være denne sin neste.
              *
-             * f.eks. Fjerne verdi 1.
-             * [0,1,2] -> [0,2]
-             * Må sette denne (1) sin forrige (0), sin neste-peker til å være denne (1) sin neste (2).
              */
             if (denne.data.compareTo(insertionValue) == 0) {
-                forrige.neste = denne.neste;
+                hashTabell[hash(insertionValue)] = denne.neste;
+                n--;
                 return true;
             }
 
             /**
-             * Flytter ett hakk fremover i hashtabellen, og sjekker while-loopen en gang til.
+             * flytter ett hakk fremover i hashtabellen.
              */
-            forrige = denne;
+            HashNode forrige = denne;
             denne = denne.neste;
+
+            /**
+             * Så lenge denne (verdien i hashtabellen) ikke er null.
+             */
+            while (denne != null) {
+                /**
+                 * Sjekker om dennes verdi er det samme som String-inputen.
+                 * Og funnet verdien som skal fjerens.
+                 *
+                 * Hvis funnet, setter vi forrige node sin neste til å være denne sin neste.
+                 * Dette er for å endre peker/referanse mellom forrige til nest.
+                 *
+                 * f.eks. Fjerne verdi 1.
+                 * [0,1,2] -> [0,2]
+                 * Må sette denne (1) sin forrige (0), sin neste-peker til å være denne (1) sin neste (2).
+                 */
+                if (denne.data.compareTo(insertionValue) == 0) {
+                    forrige.neste = denne.neste;
+                    n--;
+                    return true;
+                }
+
+                /**
+                 * Flytter ett hakk fremover i hashtabellen, og sjekker while-loopen en gang til.
+                 */
+                forrige = denne;
+                denne = denne.neste;
+            }
         }
 
 
