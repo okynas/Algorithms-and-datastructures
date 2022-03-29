@@ -50,18 +50,19 @@ public class Labyrint_v2 {
 
         /**
          * gammel rekkefølge:
+         * i denne rekkefÃ¸lgen: 1. HÃ¸yre, 2. Ned , 3. Venstre, 4. Opp
          * int dI[] = {  0,  1,  0, -1};
          * int dJ[] = {  1,  0, -1,  0};
          *
          * ny rekkefølge:
          * venstre, opp, høyre, ned
          *
-         * int dI[] = {  1,  0, -1,  0};
-         * int dJ[] = {  0,  1,  0, -1};
+         * int dI[] = {  0, -1, 0,  1}; // y akse
+         * int dJ[] = {  -1,  0, 1, 0}; // x akse
          */
 
-        int dI[] = {  1,  0, -1,  0};
-        int dJ[] = {  0,  1,  0, -1};
+        int dI[] = {  0, -1, 0,  1};
+        int dJ[] = {  -1,  0, 1, 0};
 
 
         for (int k = 0; k < 4; k++)

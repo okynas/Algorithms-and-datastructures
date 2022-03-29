@@ -59,7 +59,7 @@ public class HashLinear {
     void insert(String valueToInsert)  {
         // Beregner hashverdien
         int hashIndex = hash(valueToInsert);
-        int hashExistingValue;
+        int hashExistingIndex;
         String existingValue;
         int distanceBtwOriginalPlaceAndInsertionValue = 0;
         int distanceBtwOriginalPlaceAndExisting;
@@ -81,8 +81,8 @@ public class HashLinear {
              * valueToInsert = elementet som skal settes inn.
              */
             existingValue = hashTabell[nextHashIndex];
-            hashExistingValue = hash(existingValue);
-            distanceBtwOriginalPlaceAndExisting = nextHashIndex - hashExistingValue;
+            hashExistingIndex = hash(existingValue);
+            distanceBtwOriginalPlaceAndExisting = nextHashIndex - hashExistingIndex;
 
             /**
              * Velger å flytte dataelementet "ett hakk til høyre" (last come, first serve) hvis valueToInsert har flyttet
@@ -90,9 +90,11 @@ public class HashLinear {
              *
              * Hvis ikke, dataelementet som ligger på posisjon existingValue skal ikke flyttes, setter valueToInsert inn på neste
              * ledige posisjon.
+             *
+             * Sjekker om distansen er negativ.
              */
             if (distanceBtwOriginalPlaceAndExisting < 0) {
-                distanceBtwOriginalPlaceAndExisting = nextHashIndex + (hashLengde - hashExistingValue);
+                distanceBtwOriginalPlaceAndExisting = nextHashIndex + (hashLengde - hashExistingIndex);
             }
 
             if (distanceBtwOriginalPlaceAndExisting < distanceBtwOriginalPlaceAndInsertionValue) {
@@ -200,6 +202,13 @@ public class HashLinear {
         hL.insert("VW GOLF");
         hL.insert("VW POLO");
         hL.insert("VW TIGUAN");
+        hL.insert("FERRARI 3");
+        hL.insert("FERRARI 24");
+        hL.insert("Lambooo 23");
+        hL.insert("BUGGATY 3");
+        hL.insert("TESLA 3");
+        hL.insert("Bmw2");
+        hL.insert("AUdi33");
         /**
          * ^^^^
          * ENDRE DENNE

@@ -20,14 +20,14 @@
   - [x] Sekvensiell sorteringsalgoritme
   - [x] Shell sort
   - [x] Logaritmiske sorteringsalgoritmer
-- [ ] Binær trær
-- [ ] Binær søketrær
-- [ ] Selvbalanserende søketrær
+- [x] Binær trær
+- [x] Binær søketrær
+  - [x] Selvbalanserende søketrær
 - [ ] Svadagenerator
-- [ ] B-trær
-- [ ] Heap og prioriteringskø
-- [ ] Heapsort
-- [ ] Hashing
+- [x] B-trær
+- [x] Heap og prioriteringskø
+- [x] Heapsort
+- [x] Hashing
 - [ ] Grafer (Traversering, nåbarher, kortestevei)
 
 ## Læringsutbytte:

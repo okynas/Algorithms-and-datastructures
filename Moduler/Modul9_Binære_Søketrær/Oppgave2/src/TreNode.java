@@ -1,4 +1,3 @@
-import javax.swing.tree.TreeModel;
 
 /**
  * Oppgave 2

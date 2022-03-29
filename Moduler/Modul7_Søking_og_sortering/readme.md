@@ -40,10 +40,10 @@ For å øke forståelsen for sorteringsalgoritmene, skal følgende array "sorter
 
 Vis hvordan arrayen forandres etter hvert "hovedsteg" (du bestemmer selv hva "hovedsteg" skal bety) i følgende algoritmer:
 
-- Innstikksortering
-- Shell sort med "gaps" 5, 3 og 1
-- Flettesortering / Mergesort
-- Quicksort, med elementet i midten som partisjoneringselement
+- [x] Innstikksortering
+- [x] Shell sort med "gaps" 5, 3 og 1
+- [ ] Flettesortering / Mergesort
+- [ ] Quicksort, med elementet i midten som partisjoneringselement
 
 ## Oppgave 4
 Anta at alle elementene i en array av lengde n er like. Hva er da kjøretiden til følgende sorteringsalgoritmer:

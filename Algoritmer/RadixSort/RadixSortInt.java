@@ -43,4 +43,34 @@ public class RadixSortInt {
             ti_i_m *= 10;
         }
     }
+
+    public static void radix(String[] args) {
+        int m = Integer.parseInt(args[0]);
+        int n = Integer.parseInt(args[1]);
+
+        int ti_i_m = (int) java.lang.Math.pow(10, m);
+        int a[] = new int[n];
+        Random R = new Random();
+
+        // fyller array med tilfeldige verdier:
+        for (int i = 0; i < n; i++) {
+            a[i] = R.nextInt(ti_i_m);
+        }
+
+        // sortere
+        RadixSortInt rs = new RadixSortInt();
+        rs.sort(a, m);
+
+        // skriver ut sortert array formatert i kolonner
+        int linjeBredde = 80;
+        int tall_pr_linje = linjeBredde/(m+1);
+        for (int i = 0; i < n; i++) {
+            String format = "%" + m + "d ";
+            System.out.printf(format, a[i]);
+            if ( ((i+1) % tall_pr_linje == 0) || (i == n - 1) ) {
+                System.out.println();
+            }
+
+        }
+    }
 }
