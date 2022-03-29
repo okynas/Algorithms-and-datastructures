@@ -97,11 +97,9 @@ public class HashChained {
      * @param insertionValue, Streng som skal fjernes.
      */
     public boolean remove(String insertionValue) {
-        HashNode denne = hashTabell[hash(insertionValue)];
+        HashNode current = hashTabell[hash(insertionValue)];
 
-        if (denne != null) {
-            //return false;
-
+        if (current != null) {
 
             /**
              * hvis første element i hashtabellen skal fjernes,
@@ -111,8 +109,9 @@ public class HashChained {
              * verdien i hashtabellen til å være denne sin neste.
              *
              */
-            if (denne.data.compareTo(insertionValue) == 0) {
-                hashTabell[hash(insertionValue)] = denne.neste;
+            if (current.data == insertionValue) {
+                System.out.println("THERE IS OCCUPIED");
+                hashTabell[hash(insertionValue)] = current.neste;
                 n--;
                 return true;
             }
@@ -120,13 +119,13 @@ public class HashChained {
             /**
              * flytter ett hakk fremover i hashtabellen.
              */
-            HashNode forrige = denne;
-            denne = denne.neste;
+            HashNode previous = current;
+            current = current.neste;
 
             /**
              * Så lenge denne (verdien i hashtabellen) ikke er null.
              */
-            while (denne != null) {
+            while (current != null) {
                 /**
                  * Sjekker om dennes verdi er det samme som String-inputen.
                  * Og funnet verdien som skal fjerens.
@@ -138,8 +137,11 @@ public class HashChained {
                  * [0,1,2] -> [0,2]
                  * Må sette denne (1) sin forrige (0), sin neste-peker til å være denne (1) sin neste (2).
                  */
-                if (denne.data.compareTo(insertionValue) == 0) {
-                    forrige.neste = denne.neste;
+                if (current.data == insertionValue) {
+                    System.out.println("Someone is heree!");
+                    // setter kobling mellom forrige element og neste element.
+                    // forrige sin neste (opprinnelig denne) vil nå peke til denne sin neste.
+                    previous.neste = current.neste;
                     n--;
                     return true;
                 }
@@ -147,8 +149,8 @@ public class HashChained {
                 /**
                  * Flytter ett hakk fremover i hashtabellen, og sjekker while-loopen en gang til.
                  */
-                forrige = denne;
-                denne = denne.neste;
+                previous = current;
+                current = current.neste;
             }
         }
 
@@ -202,6 +204,13 @@ public class HashChained {
         hC.insert("VW GOLF");
         hC.insert("VW POLO");
         hC.insert("VW TIGUAN");
+        hC.insert("FERRARI 3");
+        hC.insert("FERRARI 24");
+        hC.insert("Lambooo 23");
+        hC.insert("BUGGATY 3");
+        hC.insert("TESLA 3");
+        hC.insert("Bmw2");
+        hC.insert("AUdi33");
         /**
          * ^^^^
          * ENDRE DENNE
