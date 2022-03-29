@@ -30,7 +30,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -38,11 +38,11 @@
       <recent name="C:\Users\Stian\Documents\SKOLE\Algoritmer\Obligatoriske Oppgaver\Oblig5_Hashing\Oppgave3\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Oblig5 &lt; Task 1">
+  <component name="RunManager" selected="Application.Oblig 5 &lt; Task 3">
     <configuration name="Oblig 5 &lt; Task 2" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="HashLinear" />
       <module name="Oppgave2" />
-      <option name="PROGRAM_PARAMETERS" value="10000" />
+      <option name="PROGRAM_PARAMETERS" value="10" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -52,7 +52,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="HashChained" />
       <module name="Oppgave3" />
-      <option name="PROGRAM_PARAMETERS" value="10000" />
+      <option name="PROGRAM_PARAMETERS" value="10" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>

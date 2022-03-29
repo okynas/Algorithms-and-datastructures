@@ -97,56 +97,61 @@ public class HashChained {
      * @param insertionValue, Streng som skal fjernes.
      */
     public boolean remove(String insertionValue) {
-        HashNode denne = hashTabell[hash(insertionValue)];
+        HashNode current = hashTabell[hash(insertionValue)];
 
-        if (denne == null) {
-            return false;
-        }
+        if (current != null) {
 
-        /**
-         * hvis første element i hashtabellen skal fjernes,
-         * DVS. denne (Node på indeks i hashtabellen, hvor en ny hash med samme string).
-         *
-         * Kan ikke bruke forrige.neste fordi vi fjerner første element, setter derfor kun
-         * verdien i hashtabellen til å være denne sin neste.
-         *
-         */
-        if (denne.data.compareTo(insertionValue) == 0) {
-            hashTabell[hash(insertionValue)] = denne.neste;
-            return true;
-        }
-
-        /**
-         * flytter ett hakk fremover i hashtabellen.
-         */
-        HashNode forrige = denne;
-        denne = denne.neste;
-
-        /**
-         * Så lenge denne (verdien i hashtabellen) ikke er null.
-         */
-        while (denne != null) {
             /**
-             * Sjekker om dennes verdi er det samme som String-inputen.
-             * Og funnet verdien som skal fjerens.
+             * hvis første element i hashtabellen skal fjernes,
+             * DVS. denne (Node på indeks i hashtabellen, hvor en ny hash med samme string).
              *
-             * Hvis funnet, setter vi forrige node sin neste til å være denne sin neste.
-             * Dette er for å endre peker/referanse mellom forrige til nest.
+             * Kan ikke bruke forrige.neste fordi vi fjerner første element, setter derfor kun
+             * verdien i hashtabellen til å være denne sin neste.
              *
-             * f.eks. Fjerne verdi 1.
-             * [0,1,2] -> [0,2]
-             * Må sette denne (1) sin forrige (0), sin neste-peker til å være denne (1) sin neste (2).
              */
-            if (denne.data.compareTo(insertionValue) == 0) {
-                forrige.neste = denne.neste;
+            if (current.data == insertionValue) {
+                System.out.println("THERE IS OCCUPIED");
+                hashTabell[hash(insertionValue)] = current.neste;
+                n--;
                 return true;
             }
 
             /**
-             * Flytter ett hakk fremover i hashtabellen, og sjekker while-loopen en gang til.
+             * flytter ett hakk fremover i hashtabellen.
              */
-            forrige = denne;
-            denne = denne.neste;
+            HashNode previous = current;
+            current = current.neste;
+
+            /**
+             * Så lenge denne (verdien i hashtabellen) ikke er null.
+             */
+            while (current != null) {
+                /**
+                 * Sjekker om dennes verdi er det samme som String-inputen.
+                 * Og funnet verdien som skal fjerens.
+                 *
+                 * Hvis funnet, setter vi forrige node sin neste til å være denne sin neste.
+                 * Dette er for å endre peker/referanse mellom forrige til nest.
+                 *
+                 * f.eks. Fjerne verdi 1.
+                 * [0,1,2] -> [0,2]
+                 * Må sette denne (1) sin forrige (0), sin neste-peker til å være denne (1) sin neste (2).
+                 */
+                if (current.data == insertionValue) {
+                    System.out.println("Someone is heree!");
+                    // setter kobling mellom forrige element og neste element.
+                    // forrige sin neste (opprinnelig denne) vil nå peke til denne sin neste.
+                    previous.neste = current.neste;
+                    n--;
+                    return true;
+                }
+
+                /**
+                 * Flytter ett hakk fremover i hashtabellen, og sjekker while-loopen en gang til.
+                 */
+                previous = current;
+                current = current.neste;
+            }
         }
 
 
@@ -199,6 +204,13 @@ public class HashChained {
         hC.insert("VW GOLF");
         hC.insert("VW POLO");
         hC.insert("VW TIGUAN");
+        hC.insert("FERRARI 3");
+        hC.insert("FERRARI 24");
+        hC.insert("Lambooo 23");
+        hC.insert("BUGGATY 3");
+        hC.insert("TESLA 3");
+        hC.insert("Bmw2");
+        hC.insert("AUdi33");
         /**
          * ^^^^
          * ENDRE DENNE
