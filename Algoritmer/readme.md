@@ -5,6 +5,7 @@
 En algoritme er i matematikk og informatikk en presis beskrivelse av en endelig serie operasjoner som skal utføres for å løse et problem eller flere problemer. Hvis en prosess er algoritmisk, kan den skrives som en serie operasjoner som kan utføres gjennom beregninger.
 
 ## Liste over algoritme:
+
 - [x] Stack
 - [x] Queue
 - [x] Radix Sort
@@ -24,6 +25,7 @@ En algoritme er i matematikk og informatikk en presis beskrivelse av en endelig 
 - [x] Heap og prioriteringskø
 - [x] Hashing
 - [ ] Grafer (Traversering, nåbarher, kortestevei)
+
 
 
 ## Bilder:
