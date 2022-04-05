@@ -14,6 +14,7 @@ En algoritme er i matematikk og informatikk en presis beskrivelse av en endelig 
 - sort
 - trees
 - B-Tree
+- Graphs
 
 ## Bilder:
 
