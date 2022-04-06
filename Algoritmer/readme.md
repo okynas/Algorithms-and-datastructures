@@ -24,7 +24,7 @@ En algoritme er i matematikk og informatikk en presis beskrivelse av en endelig 
 - [x] B-trær
 - [x] Heap og prioriteringskø
 - [x] Hashing
-- [ ] Grafer (Traversering, nåbarher, kortestevei)
+- [x] Grafer (Traversering, nåbarher, kortestevei)
 
 
 
