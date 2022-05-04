@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Exam-Repetition.iml" filepath="$PROJECT_DIR$/.idea/Exam-Repetition.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ModuleRepetition/ModuleRepetition.iml" filepath="$PROJECT_DIR$/ModuleRepetition/ModuleRepetition.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PreviousExams/PreviousExams.iml" filepath="$PROJECT_DIR$/PreviousExams/PreviousExams.iml" />
+    </modules>
+  </component>
+</project>
