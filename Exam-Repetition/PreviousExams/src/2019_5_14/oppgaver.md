@@ -158,4 +158,51 @@ void settInn(int verdi) {
 
 ### b)
 ```java
+int settHøyde(treNode t) {
+  if (t == null) {
+    return -1;
+  }
+
+  int v = settHøyde(t.venstre);
+  int h = settHøyde(t.høyre);
+
+  if (v>h) {
+    t.høyde = v + 1;
+  } else {
+    t.høyde = h + 1;
+  }
+
+  return t.høyde;
+
+}
+```
+
+### c)
+```java
+boolean erPerfekt(treNode t) {
+  // Returnerer true hvis treet med rot i t er et perfekt binært tre
+  // Forutsetter at høyden er satt riktig i alle noder
+
+  // tomt tree er PBT
+  if (t == null) {
+    return true;
+  }
+
+  // tree med høyde = 0 er PBT
+  if (t.høyde == 0) {
+    return 0;
+  }
+
+  if (t.venstre == null || t.høyre == null) {
+    return false;
+  }
+
+  if ( (erPerfekt(t.venstre) && (t.høyde - t.venstre.høyde == 1)) &&
+   (erPrefekt(t.høyre) && (t.høyde - t.høyre.høyde == 1)) ) {
+    return true;
+  }
+
+
+  return false;
+}
 ```
