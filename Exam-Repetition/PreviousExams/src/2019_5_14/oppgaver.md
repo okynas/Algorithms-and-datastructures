@@ -63,3 +63,99 @@ int startSekvens2(int A[]) {
 
 }
 ```
+
+## Oppgave 3
+
+```java
+// Finner og skriver ut alle løsninger av tårnproblemet
+public class tårn{
+  public static int n; // Størrelse på brettet
+  public static int p[]; // Lagrer en løsning på tårnproblemet
+
+  // <Evt. andre variabler/arrayer som trengs>
+  public boolean[] brukt;
+
+  public static void lagLøsning(int rad){
+    // Skriver ut alle mulige løsninger på tårnproblemet rekursivt
+    // ved å sette ut tårn fra og med denne raden og til og med rad n.
+    // Det er allerede satt ut tårn på radene 1, 2, ..., rad-1
+    // <Skal programmeres i oppgave 2>
+    if (rad > n) {
+      skrivLosning();
+    }
+    else {
+      for (int kol = 1; kol <= n; kol++) {
+        if (!brukt[kol]) {
+          p[rad] = kol;
+          brukt[kol] = true;
+          lagLosning(n+1);
+          brukt[kol] = false;
+        }
+      }
+    }
+  }
+
+  public static void skrivLøsning(){
+    for (int i = 1; i <= n; i++) {
+      System.out.print(p[i] + " ");
+      System.out.println();
+    }
+  }
+
+  public static void main(String args[]){
+    System.out.print("n?: ");
+    n = Integer.parseInt(System.console().readLine());
+    p = new int[n + 1];
+
+    brukt = new boolean[n+1];
+
+    for (int i = 1; i <= n; i++) {
+      brukt[i] = false;
+    }
+
+    lagLøsning(1);
+  }
+}
+```
+
+
+## Oppgave 4
+### a)
+```java
+void settInn(int verdi) {
+  // Setter inn en ny forekomst av en verdi i søketreet
+  if (erTomt()) {
+    rot = new treNode(verdi);
+  } else {
+    treNode current = rot;
+    boolean finished = false;
+    while(!finished) {
+      if (verdi == current.data) {
+        current.antall++;
+        finished = true;
+      } else {
+        if (verdi < current.data) {
+          if (current.venstre == null) {
+            current.venstre = new treNode(verdi);
+            finished = true;
+          } else {
+            current = current.venstre;
+          }
+        } else  {
+          if (current.høyre == null) {
+            current.høyre = new treNode(verdi);
+            finished = true;
+          } else {
+            current = current.høyre;
+          }
+        }
+      }
+    }
+
+  }
+}
+```
+
+### b)
+```java
+```
