@@ -71,15 +71,9 @@ int startSekvens2(int A[]) {
 public class tårn{
   public static int n; // Størrelse på brettet
   public static int p[]; // Lagrer en løsning på tårnproblemet
-
-  // <Evt. andre variabler/arrayer som trengs>
   public boolean[] brukt;
 
   public static void lagLøsning(int rad){
-    // Skriver ut alle mulige løsninger på tårnproblemet rekursivt
-    // ved å sette ut tårn fra og med denne raden og til og med rad n.
-    // Det er allerede satt ut tårn på radene 1, 2, ..., rad-1
-    // <Skal programmeres i oppgave 2>
     if (rad > n) {
       skrivLosning();
     }
