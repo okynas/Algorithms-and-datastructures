@@ -98,8 +98,8 @@ public int finn(int A[], int verdi) {
   return -(index + 1);
 }
 
-public static int finn2(int A[], int verdi) {
-  int nedre = 0, ovre = A.length, midt = 0, midtverdi = 0;
+public int finn(int A[], int verdi) {
+  int nedre = 0, ovre = A.length, midt = 0, midtverdi 0 =;
   boolean ferdig = false;
 
   while (nedre <= ovre && !ferdig) {
@@ -114,62 +114,15 @@ public static int finn2(int A[], int verdi) {
     else {
       ferdig = true;
     }
-  }
 
-  if (nedre > ovre) {
-    return -(nedre+1);
-  }
+    if (nedre > ovre) {
+      return -(nedre+1);
+    }
 
-  while(midt > 0 && A[midt - 1] == verdi) {
-    midt--;
-  }
-  return midt;
-
-}
-```
-
-## Oppgave 3c
-```java
-public int min() {
-  // ingen noder i treet.
-  if (isEmpty()) {
-    return 0;
-  }
-  node current = rot;
-  while (current.left != null) {
-    current = current.left;
-  }
-
-  return current.value;
-}
-```
-
-## Oppgave 3f
-
-```java
-public void insert(int value){
-  numNodes++;
-  if (root == null){
-    root = new node(value);
-    height = 0; // 3f
-    return;
-  }
-  node current = root, parent = null;
-  int level = 0; // 3f
-  while (current != null){
-    parent = current;
-    current = value < parent.value ? parent.left : parent.right;
-    level++; // 3f
-  }
-  current = new node(value);
-  if (value < parent.value) {
-    parent.left = current;
-  } else {
-    parent.right = current;
-  }
-
-  if (level > height) { // 3f
-    height = level; // 3f
+    while(midt > 0 && A[midt - 1] == verdi) {
+      midt--;
+    }
+    return midt;
   }
 }
 ```
