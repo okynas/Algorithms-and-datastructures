@@ -173,3 +173,53 @@ public void insert(int value){
   }
 }
 ```
+
+## 3h
+```java
+public void lowestLevel() {
+  lowestLevelRek(rot, 0);
+  System.out.println();
+}
+
+private void lowestLevelRek(node r, int level) {
+  if (r == null) {
+    return;
+  }
+
+  lowestLevelRek(r.left, level + 1);
+  if (level == height) {
+    System.out.println(r.value + " ");
+  }
+
+  lowestLevelRek(r.right, level + 1);
+}
+```
+
+## 4a
+    a:    b:  c:    d:    e:    f:
+a:  0     *   *     *     0.1   0.9
+b:  0.3   0   0.3   0.4   *     *
+c:  *     *   0     0.6   0.4   *
+d:  *     *   *     0     1     *
+e:  0.55  *   *     *     0     0.45
+f:  *     *   *     1     *     0
+
+## 4b
+    a:    b:  c:    d:    e:    f:
+a:  0     *   *     1.55  0.1   0.55
+b:  0.3   0   0.3   0.4   0.4   0.85
+c:  0.95  *   0     0.6   0.4   0.85
+d:  1.55  *   *     0     1     1.45
+e:  0.55  *   *     1.45  0     0.45
+f:  2.55  *   *     1     2     0
+
+## 4c
+korteste vei til gjeldende node er markert med *
+noder som ikke er oppsøkt er markert med -
+
+steg    a:    b:    c:    d:    e:    f:
+1:      0.3   0*    0.3   0.4   -     -
+2:      0.3*  0*    0.3   0.4   0.4   1.2
+3:      0.3*  0*    0.3*  0.4   0.4   1.2
+4:      0.3*  0*    0.3*  0.4*  0.4   0.85
+5:      0.3*  0*    0.3*  0.4*  0.4*  0.85*
