@@ -1,5 +1,18 @@
 public class test {
-    public static int finn(int A[], int verdi) {
+    public int finn(int A[], int verdi) {
+        int index = 0;
+        int n = A.length;
+
+        for (index = 0; index < n; index++) {
+            if (A[index] == verdi) {
+                return index;
+            }
+        }
+
+        return - (index + 1);
+    }
+
+    public static int finn3(int A[], int verdi) {
         int index = 0;
         int n = A.length;
 
@@ -44,7 +57,7 @@ public class test {
 
     public static void main(String[] args) {
         int A[]  = {2, 3, 5, 7, 10, 11, 12, 12, 18, 20};
-        int f = finn2(A, 9);
+        int f = finn2(A, 3);
         System.out.println(f);
     }
 }

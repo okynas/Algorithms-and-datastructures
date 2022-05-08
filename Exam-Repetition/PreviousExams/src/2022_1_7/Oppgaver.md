@@ -19,7 +19,7 @@ public boolean isSorted() {
       current = current.next;
     }
   }
-  
+
   return false;
 }
 ```
@@ -102,7 +102,7 @@ O(n), metoden har en løkke som går igjennom hele lisa for å finne det nest si
 O(n), ved hver iterasjon i metoden, settes nytt element inn i listen, altså n iterasjoner.
 
 ### d)
-O(n log n), fordi for hvert gjennomløp er det 2 operasjoner som halverer antall ganger koden kjøres. Og det er en løkke som 
+O(n log n), fordi for hvert gjennomløp er det 2 operasjoner som halverer antall ganger koden kjøres. Og det er en løkke som
 går n ganger, og fjerner og legger til første element.
 
 ## Oppgave 3
@@ -129,7 +129,7 @@ V   H   D   S
 7   2   1   3
 21  1   3   2
 18  0   4   1
-4   1   2   2 
+4   1   2   2
 30  1   2   2
 5   0   3   1
 33  0   3   1
@@ -164,7 +164,7 @@ private boolean settInn(TreNode rot, int verdi) {
       if(settInn(rot.venstre, verdi)) {
         rot.S++;
         return true;
-      }  
+      }
       else {
         return false;
       }
