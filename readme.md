@@ -28,7 +28,7 @@
 - [x] Heap og prioriteringskø
 - [x] Heapsort
 - [x] Hashing
-- [z] Grafer (Traversering, nåbarher, kortestevei)
+- [x] Grafer (Traversering, nåbarher, kortestevei)
 
 ## Læringsutbytte:
 
