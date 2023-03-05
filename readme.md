@@ -1,50 +1,50 @@
-# Algoritmer-og-Datastrukturer
+# Algorithms-and-Data-Structures
 
-## Innhold:
+## Contents:
 
-- Algoritmeanalyse
-- Rekursiv programmering
-- Sentrale datastrukturer som tabeller, lister, køer, stakker, hashtabeller, søketrær, heap, B-trær og grafer
-- Algoritmer for sortering, søking, lagring og rekursjon.
+- Algorithm analysis
+- Recursive programming
+- Central data structures such as tables, lists, queues, stacks, hash tables, search trees, heaps, B-trees and graphs
+- Algorithms for sorting, searching, storing and recursion.
 
 
-## Algoritmer:
+## Algorithms:
 - [x] Stack
 - [x] Queue
-- [x] Radix Sort
-- [x] Lister
-- [x] Rekursiv Programmering
+- [x] Radix Black
+- [x] Lists
+- [x] Recursive Programming
 - [x] Backtracking
-- [x] Søking
-- [x] Sortering
-  - [x] Sekvensiell sorteringsalgoritme
-  - [x] Shell sort
-  - [x] Logaritmiske sorteringsalgoritmer
-- [x] Binær trær
-- [x] Binær søketrær
-  - [x] Selvbalanserende søketrær
-- [ ] Svadagenerator
-- [x] B-trær
-- [x] Heap og prioriteringskø
-- [x] Heapsort
+- [x] Search
+- [x] Sorting
+   - [x] Sequential sorting algorithm
+   - [x] Shell black
+   - [x] Logarithmic sorting algorithms
+- [x] Binary trees
+- [x] Binary search trees
+   - [x] Self-balancing search trees
+- [ ] Snow generator
+- [x] B-trees
+- [x] Heap and priority queue
+- [x] Heap sort
 - [x] Hashing
-- [x] Grafer (Traversering, nåbarher, kortestevei)
+- [x] Graphs (Traversal, Reach, Shortest Path)
 
-## Læringsutbytte:
+## Learning outcomes:
 
-**Etter gjennomgang skal algoritmer og datastrukturer gi kunnskap i:**
-- forklare oppbyggingen og hensikten med lineære datastrukturer (lister, køer, stack), trestrukturer (binærtrær, søketrær, balanserte trær, binærheaper, B-trær), hashtabeller og nettverkstrukturer/grafer
-- forstå og forklare effektivitet av algoritmer, med spesiell vekt på asymptotisk analyse
-- gjøre rede for virkemåten og effektiviteten til standard algoritmer for lagring, innsetting, søking, sletting, sortering, traversering og backtracking, både som iterative og rekursive varianter
+**After review, algorithms and data structures must provide knowledge in:**
+- explain the structure and purpose of linear data structures (lists, queues, stack), tree structures (binary trees, search trees, balanced trees, binary heaps, B-trees), hash tables and network structures/graphs
+- understand and explain the efficiency of algorithms, with special emphasis on asymptotic analysis
+- explain the operation and efficiency of standard algorithms for storage, insertion, searching, deletion, sorting, traversal and backtracking, both as iterative and recursive variants
 
 
-**Det vil også gi ferdigheter som:**
-- designe, implementere og anvende datastrukturer for ulike behov
-- analysere, designe, implementere og anvende fundamentale og klassiske algoritmer
-- bruke både egenutviklede og ferdig tilgjengelige algoritmer og datastrukturer til å løse sammensatte og kompliserte problemer
+**It will also provide skills such as:**
+- design, implement and apply data structures for different needs
+- analyze, design, implement and apply fundamental and classic algorithms
+- use both self-developed and readily available algorithms and data structures to solve complex and complicated problems
 
-**Og kompetanse innenfor:**
-- har innsikt i fundamentale og varige prinsipper innen klassisk informatikk, som vil bestå uavhengig av maskinplattformer og programmeringsspråk
-- behersker begreper og terminologi som brukes i vide kretser i informatikken verden over
-- kan diskutere i faglige fora og gi råd om bruk av datastrukturer og algoritmer i ulike situasjoner
-- kan formidle viktigheten og nødvendigheten av å bruke hensiktsmessige strukturer og effektive algoritmer
+**And competence within:**
+- has insight into fundamental and enduring principles within classical informatics, which will remain independent of machine platforms and programming languages
+- master concepts and terminology that are used in wide circles in informatics worldwide
+- can discuss in professional forums and give advice on the use of data structures and algorithms in various situations
+- can convey the importance and necessity of using appropriate structures and effective algorithms
